@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Contacto";
+}
+    <div class="main home">
+        <section class="cotization">
+            <div class="grid">
+                <div class="col">
+                    <div class="heading">
+                        Transportar Carga nunca fue tan fácil
+                    </div>
+                    <div class="subheading">
+                        Estamos revolucionando la logística en Bolívia. Contamos con una red de transporte y almacenamiento fortalecida por tecnología innovadora.
+
+                        Cotiza nuestros servicios ahora!
+                    </div>
+                </div>
+                <div class="col">
+                    <form class="form cotization-form"
+                          asp-controller="Contact" asp-action="Contact"
+                          name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                        <input type="hidden" name="zf_redirect_url" value="">
+                        <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                        <input type="hidden" name="zc_gad" value="">
+                        <div class="form-row">
+                            <label for="company">Empresa</label>
+                            <input type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                        </div>
+                        <div class="form-row">
+                            <label for="fullname">Nombre Completo *</label>
+                            <input required type="text" name="fullname" placeholder="Ej. Juan Perez">
+                        </div>
+                        <div class="form-row">
+                            <label for="phone">Teléfono *</label>
+                            <input required type="text" name="phone" placeholder="Ej. 78099062">
+                        </div>
+                        <div class="form-row">
+
+                            <label for="email">Email</label>
+                            <input type="text" name="email" placeholder="Ej. example@gmail.com">
+                        </div>
+                        <div class="form-row">
+
+                            <label for="serviceType">Tipo de Servicio *</label>
+                            <select required name="serviceType" >
+                                <option value="0" default>Seleccionar</option>
+                                <option value="1">Transporte Nacional</option>
+                                <option value="2">Almacenamiento de Carga</option>
+                            </select>
+                        </div>
+                        <div class="grid form-row row-of-combos">
+                            <div class="col">
+                                <label id="lblOrigen"  for="loadingSource">Origen de Carga</label>
+                                <select required name="loadingSource" id="">
+                                    <option value="" default>Seleccionar</option>
+                                    <option value="SantaCruz">Santa Cruz</option>
+                                    <option value="LaPaz">La Paz</option>
+                                    <option value="Cochabamba">Cochabamba</option>
+                                    <option value="Chuquisaca">Chuquisaca</option>
+                                    <option value="Oruro">Oruro</option>
+                                    <option value="Tarija">Tarija</option>
+                                    <option value="Beni">Beni</option>
+                                    <option value="Potosi">Potosi</option>
+                                    <option value="Pando">Pando</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
+                                <select name="loadingDestination" id="">
+                                    <option value="" default>Seleccionar</option>
+                                    <option value="SantaCruz">Santa Cruz</option>
+                                    <option value="LaPaz">La Paz</option>
+                                    <option value="Cochabamba">Cochabamba</option>
+                                    <option value="Chuquisaca">Chuquisaca</option>
+                                    <option value="Oruro">Oruro</option>
+                                    <option value="Tarija">Tarija</option>
+                                    <option value="Beni">Beni</option>
+                                    <option value="Potosi">Potosi</option> 
+                                    <option value="Pando">Pando</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" onclick="return responseCotization();" style="background:#ef9405" class="btn btn-primary btn-lg btn-block">Cotizar</button>
+                            @*<button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                        </div>
+                        <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+<script src="~/js/contact.js"></script>
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@

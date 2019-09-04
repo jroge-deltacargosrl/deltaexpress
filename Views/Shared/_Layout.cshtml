@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>@ViewData["Title"] - Delta Xpress</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="shortcut icon" href="~/images/deltax-logo.ico" />
+    <link href="~/css/bundle-styles.css" rel="stylesheet">
+    <environment include="Development">
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <link rel="shortcut icon" href="~/images/deltax-02.ico" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:200,400,500,600,700" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="~/node_modules/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+    <header>
+        <div class="desktop">
+            <div>
+                <a href="/">
+                    <img class="logo" src="~/images/deltax.png" alt="">
+                </a>
+            </div>
+            <div class="submenu">
+                <a class="logo" href="https://wa.me/59175637458">
+                    <img class="logo" src="~/images/whatsapp_back.png" alt="" />
+                </a>
+                <a class="logo" href="https://www.linkedin.com/company/40775825/admin/">
+                    <img class="logo" src="~/images/linkedin_back..png" alt="" />
+                </a>
+                @*<a href="#">Registrate</a>
+                    <a class="button" href="#">Ingresá</a>*@
+            </div>
+        </div>
+        <div class="mobile">
+            <a href="/">
+                <img class="logo" src="~/images/deltax.png" alt="">
+            </a>
+            <button class="hamburger hamburger--slider " type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <div class="menu">
+                <div class="items">
+                    <a href="/">
+                        Home
+                    </a>
+                    <a href="#">Soy dador de carga</a>
+                    <a href="#">Soy transportista</a>
+                    <a href="https://app.avancargo.com/auth/login?initial_screen=signUp">Registrate</a>
+                    <a href="https://app.avancargo.com/auth/login">Ingresá</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+
+
+    </div>
+    @RenderBody()
+    @*<footer>
+            <div>
+                Copyright © 2018 Avancargo
+            </div>
+        </footer>*@
+    <footer class="border-top footer text-muted">
+        <div class="container"style="text-align:center;">
+            &copy; Copyright Delta Express - <a style="color:white" asp-area="" asp-controller="Home" asp-action="Index">Todos los Derechos Reservados</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <script src="~/js/contact.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
