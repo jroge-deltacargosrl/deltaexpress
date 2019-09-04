@@ -27,4 +27,3 @@ E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcor
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.dll
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete
-E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csprojAssemblyReference.cache

@@ -1174,6 +1174,8 @@ header {
       align-items: center; }
       header .desktop .submenu .button {
         margin-left: 1em; }
+
+    
   header .mobile {
     height: 100%;
     display: flex;
@@ -1207,6 +1209,10 @@ header {
       header .mobile .menu.active {
         opacity: 1;
         left: 0; }
+      header .mobile .logoMovil{
+          height:50px;
+          padding:5px;
+      }
 
 @media all and (min-width: 46.8em) {
   header .desktop {
