@@ -940,7 +940,7 @@ section {
   overflow: hidden; }
 
 .main {
-  padding-top: 80px; }
+  padding-top: 30px; }
 
 @media all and (min-width: 46.8em) {
   section {
@@ -960,9 +960,12 @@ section {
     padding: 4em 16%; } }
 
 .heading {
-  font-size: 3.25em;
+  font-size: 40px;
   font-weight: 600;
-  margin-bottom: 1em; }
+  /*margin-bottom: 1em; */
+  margin-bottom:0.6em;
+
+}
 
 .subheading {
   font-size: 1.188em;
@@ -1141,8 +1144,8 @@ input[type="checkbox"]:checked + label:before {
     margin-right: 1em; } }
 
 header {
-  height: 80px;
-  padding: 0 36px;
+  height: auto;
+  padding: 0 0;/*0 36px;*/
   background: #fff;
   position: fixed;
   top: 0;
@@ -1507,8 +1510,11 @@ header {
     width: 240px; } }
 
 footer {
-  padding: 10px 5%;
+  position:fixed;
+  padding:1px 0%; /*padding: 10px 5%;*/
   background-color: #232733;
+  height:100%;
+  box-sizing:content-box;
   color: #fff; }
   footer .menu {
     display: flex;
@@ -1633,12 +1639,13 @@ footer {
         text-align: left; } }
 
 .cotization {
-    background: url(../images/1500x844_optimizar_rutas_transporte.jpg) no-repeat;
+    background: url(../images/contratos-transporte-terrestre-andersen-blog.jpg) no-repeat;
     /*background: url(../images/5c6043480091175b919728bc517a13dd.jpg) no-repeat;*/
     height: auto;
     background-size: cover;
     display: flex;
     color: #fff;
+    margin-top:35px;
 }
   .cotization .form {
     color: #402e32;

@@ -45,16 +45,14 @@ namespace DeltaXpress.Utils
                     </html>";
         }
 
+        public static string field(string value,string defaultValue="") => !isNull(value) ? value.Trim(): defaultValue;
+
         private static List<string> fieldsContact(ContactModel contact)
         {
-            string company = contact.company.Trim();
-            string fullname = contact.fullname.Trim();
-            string phone = contact.phone.Trim();
-            string email = "sin correo de referencia";
-            if (!string.IsNullOrEmpty(contact.email))
-            {
-                email = contact.email.Trim();
-            }
+            string company =  field(contact.company);
+            string fullname = field(contact.fullname);
+            string phone = field(contact.phone);
+            string email = field(contact.email, "sin correo de referencia");
             Load_Type serviceType = contact.serviceType;
             string origen = NO_APLICA, destino = NO_APLICA;
             if (serviceType.Equals(Load_Type.TRANSPORTE_NACIONAL))
@@ -71,7 +69,10 @@ namespace DeltaXpress.Utils
             dataContact.ForEach(val => data += $"<tr><td><b>{fielsHeader[i++]}</b></td><td><i>{val}<i></td></tr>");
             return data;
         }
-        
+
+        public static bool isNull<T>(T obj) => obj == null;
+
+
 
         /// <summary>
         /// Metodo que lee un documento .js 
