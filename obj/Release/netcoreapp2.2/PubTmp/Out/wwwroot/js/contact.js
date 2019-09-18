@@ -40,40 +40,50 @@ jQuery(document).ready(function ($) {
 });
 
 function responseCotization() {
-    var contactRequest = {
-        company: $('input[name=company]').val(),
-        fullname: $('input[name=fullname]').val(),
-        phone: $('input[name=phone]').val(),
-        email: $('input[name=email]').val(),
-        serviceType: $('select[name=serviceType]').val(),
-        transportRoute: {
-            loadingSource: $('select[name=loadingSource]').val(),
-            loadingDestination: $('select[name=loadingDestination]').val()
-        }
-    };
-    //alert(JSON.stringify(contactRequest));
-    $.post("/Contact/ContactForm/",
-        contactRequest,
-        function (data, status, jqXHR) {
-            Swal.fire({
-                title: 'Solicitud de Cotizacion',
-                text: data.message,
-                type: data.code == 200 ? 'success' : 'error',
-                confirmButtonText: 'OK',
-            });
-            clearFields();
-        },"json")
-        .always(function (data ) {
-            Swal.fire({
-                title: 'Solicitud de Cotizacion',
-                text: data.message,
-                type: data.code == 200 ? 'success' : 'error',
-                confirmButtonText: 'OK',
-            });
-            clearFields();
-        })
-        .fail(function (error) { });
-    return false;
+
+    var $formContact = $('form')[0];
+    if ($formContact.checkValidity()) {
+        var contactRequest = {
+            company: $('input[name=company]').val(),
+            fullname: $('input[name=fullname]').val(),
+            phone: $('input[name=phone]').val(),
+            email: $('input[name=email]').val(),
+            serviceType: $('select[name=serviceType]').val(),
+            transportRoute: {
+                loadingSource: $('select[name=loadingSource]').val(),
+                loadingDestination: $('select[name=loadingDestination]').val()
+            }
+        };
+        $.post("/Contact/ContactForm/",
+            contactRequest,
+            function (data, status, jqXHR) {
+                Swal.fire({
+                    title: 'Solicitud de Cotizacion',
+                    text: data.message,
+                    type: data.code == 200 ? 'success' : 'error',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                clearFields();
+            }, "json")
+            .always(function (data) {
+                Swal.fire({
+                    title: 'Solicitud de Cotizacion',
+                    text: data.message,
+                    type: data.code == 200 ? 'success' : 'error',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                clearFields();
+            })
+            .fail(function (error) { });
+        return false;    
+    } 
+    return true;
+    
+    /*if (contactRequest.fullname != '' && contactRequest.phone != '' && contactRequest.serviceType != 0) {
+        
+    }*/
 }
 
 function clearFields() {

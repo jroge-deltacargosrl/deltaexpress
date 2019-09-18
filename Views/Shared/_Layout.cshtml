@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="shortcut icon" href="~/images/deltax-logo.ico" />
-    <link href="~/css/bundle-styles.css" rel="stylesheet">
+
     <environment include="Development">
 
     </environment>
@@ -25,10 +25,40 @@
     <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="~/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link href="~/css/bundle-styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="desktop">
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand"  asp-area="" asp-controller="Home" asp-action="Index">
+                    <img style="height:8vh;" src="~/images/deltax.png"/>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-0">
+                        <li class="nav-item" style="margin-left:15px;">
+                            <a class="nav-link text-black-50" href="https://wa.me/59175637458">
+                                <img style="height:5vh;" src="~/images/whatsapp (2).png" alt="" />
+                                Whatsapp
+                            </a>
+                        </li>
+                        <li class="nav-item" style="margin-left:15px;">
+                            <a class="nav-link text-black-50" href="https://www.linkedin.com/company/40775825/admin/">
+                                <img style="height:5vh;" src="~/images/linkedin (3).png" alt="" />
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        @*<div class="desktop">
             <div>
                 <a href="/">
                     <img class="logo" src="~/images/deltax.png" alt="">
@@ -36,16 +66,30 @@
             </div>
             <div class="submenu">
                 <a class="logo" href="https://wa.me/59175637458">
-                    <img class="logo" src="~/images/whatsapp_back.png" alt="" />
+                    <img class="logo" src="~/images/whatsapp (2).png" alt="" />
                 </a>
                 <a class="logo" href="https://www.linkedin.com/company/40775825/admin/">
-                    <img class="logo" src="~/images/linkedin_back..png" alt="" />
+                    <img class="logo" src="~/images/linkedin (3).png" alt="" />
                 </a>
-                @*<a href="#">Registrate</a>
-                    <a class="button" href="#">Ingresá</a>*@
             </div>
         </div>
-        <div class="mobile" >
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <a href="@Url.Action("Index","Home")">
+                <img class="logo" src="~/images/deltax.png" alt="">
+            </a>
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+        </div>*@
+
+
+
+        @*@<div class="mobile">
             <a href="@Url.Action("Index","Home")">
                 <img class="logo" src="~/images/deltax.png" alt="">
             </a>
@@ -56,25 +100,22 @@
             </button>
 
             <div class="menu">
-                <div class="items" >
-                    <a href="/" >
+                <div class="items">
+                    <a href="/">
                         <img class="logo" src="~/images/deltax.png" alt="" />
                     </a>
-                        
+
                     <a href="https://wa.me/59175637458" style="padding:10px;">
-                        <img class="img-fluid" src="~/images/whatsapp_back.png" />
+                        <img class="logoMovil" src="~/images/whatsapp (2).png" />
                         Whatsapp
                     </a>
-                    <a  href="https://www.linkedin.com/company/40775825/admin/" style="padding:10px;">
-                        <img class="img-fluid" src="~/images/linkedin_back..png" />
+                    <a href="https://www.linkedin.com/company/40775825/admin/" style="padding:10px;">
+                        <img class="logoMovil" src="~/images/linkedin (3).png" />
                         Linkedin
-                        
                     </a>
-                    @*<a href="https://app.avancargo.com/auth/login?initial_screen=signUp">Registrate</a>
-                    <a href="https://app.avancargo.com/auth/login">Ingresá</a>*@
                 </div>
             </div>
-        </div>
+        </div>*@
     </header>
     @RenderBody()
     @*<footer>
@@ -82,9 +123,9 @@
                 Copyright © 2018 Avancargo
             </div>
         </footer>*@
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-muted">
         <div class="container" style="text-align:center;">
-            &copy; Copyright Delta Express - <a style="color:white" asp-area="" asp-controller="Home" asp-action="Index">Todos los Derechos Reservados</a>
+            &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
@@ -127,8 +168,6 @@
         t.parentNode.insertBefore(s, t);
         d.write("<div id='zsiqwidget'></div>");
     </script>*@
-
-    <!-- Hotjar Tracking Code for https://stg.avancargo.com -->
     <script>
         (function (h, o, t, j, a, r) {
             h.hj = h.hj || function () {

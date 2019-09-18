@@ -6,12 +6,16 @@
             <div class="grid">
                 <div class="col">
                     <div class="heading">
-                        Transportar Carga nunca fue tan fácil
+                        Revolucionamos el transporte de carga en Bolivia
                     </div>
                     <div class="subheading">
-                        Estamos revolucionando la logística en Bolívia. Contamos con una red de transporte y almacenamiento fortalecida por tecnología innovadora.
-
-                        Cotiza nuestros servicios ahora!
+                        Transformamos la logística, trabajamos con tecnología innovadora que optimiza cada una de nuestras operaciones, nunca fue tan fácil transportar carga.
+                        <br /><br />
+                               <h3>
+                                   <b>
+                                       Cotiza nuestros servicios ahora!
+                                   </b>
+                               </h3>
                     </div>
                 </div>
                 <div class="col">
@@ -42,7 +46,7 @@
 
                             <label for="serviceType">Tipo de Servicio *</label>
                             <select required name="serviceType" >
-                                <option value="0" default>Seleccionar</option>
+                                <option value="">Seleccionar</option>
                                 <option value="1">Transporte Nacional</option>
                                 <option value="2">Almacenamiento de Carga</option>
                             </select>
@@ -51,7 +55,7 @@
                             <div class="col">
                                 <label id="lblOrigen"  for="loadingSource">Origen de Carga</label>
                                 <select required name="loadingSource" id="">
-                                    <option value="" default>Seleccionar</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="SantaCruz">Santa Cruz</option>
                                     <option value="LaPaz">La Paz</option>
                                     <option value="Cochabamba">Cochabamba</option>
@@ -66,7 +70,7 @@
                             <div class="col">
                                 <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
                                 <select name="loadingDestination" id="">
-                                    <option value="" default>Seleccionar</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="SantaCruz">Santa Cruz</option>
                                     <option value="LaPaz">La Paz</option>
                                     <option value="Cochabamba">Cochabamba</option>
@@ -80,7 +84,8 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="submit" onclick="return responseCotization();" style="background:#ef9405" class="btn btn-primary btn-lg btn-block">Cotizar</button>
+                            <button type="submit" onclick="return responseCotization();"
+                                    style="background:#ef9405; border-color:#ef9405;" class="btn btn-primary btn-lg btn-block">Cotizar</button>
                             @*<button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
                         </div>
                         <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
