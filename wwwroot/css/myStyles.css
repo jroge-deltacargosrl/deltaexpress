@@ -1,0 +1,83 @@
+body{
+    height:100%;
+}
+.logo {
+    width: 200px;
+}
+
+.myNavbar {
+    background-color: white;
+    height: 75px;
+    display: flex;
+    width: 103%;
+}
+
+.elements {
+    width: 500px;
+    float: right;
+    padding-left: 50%;
+    display: flex;
+}
+
+.elementDiv {
+    width: 100px;
+    margin: auto 10px auto 10px;
+    padding: 0;
+    float: right;
+}
+
+.element {
+    width: auto;
+    margin: 0;
+}
+
+.elementButton {
+    width: 107px;
+}
+
+@keyframes parpadeo {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #ffffff
+    }
+}
+
+@keyframes escribiendo {
+    from {
+        width: 100%
+    }
+
+    to {
+        width: 0
+    }
+}
+
+h1 {
+    color: black;
+    position: relative;
+    background-color: #ec9404;
+    padding: 15px;
+}
+
+.h12 {
+    padding: 15px 0px 15px 15px;
+}
+
+h1 .span1 {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 50px;
+    border-left: 3px solid white;
+    background-color: #ec9404;
+    box-sizing: border-box;
+    animation: escribiendo 3s steps(15) infinite;
+}
+#sec-1 {
+    display: flex;
+    margin-top: 15%;
+    height:100%;
+}
