@@ -929,7 +929,7 @@ body {
 .grid {
   display: flex;
   width: 100%;
-  flex-direction: column; }
+  flex-direction: column; } 
 
 .col {
   flex: 1;
@@ -940,7 +940,7 @@ section {
   overflow: hidden; }
 
 .main {
-  padding-top: 30px; }
+  padding: 0px; }
 
 @media all and (min-width: 46.8em) {
   section {
@@ -1645,7 +1645,8 @@ footer {
     background-size: cover;
     display: flex;
     color: #fff;
-    margin-top:35px;
+    margin:0;
+    text-align:left;
 }
   .cotization .form {
     color: #402e32;
@@ -1655,6 +1656,28 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 20px 0 rgba(94, 94, 94, 0.21);
     background-color: #ffffff; }
+
+.carrierRegister {
+    background: url(../images/1500x844_optimizar_rutas_transporte.jpg) no-repeat;
+    /*background: url(../images/5c6043480091175b919728bc517a13dd.jpg) no-repeat;*/
+    height: auto;
+    background-size: cover;
+    display: flex;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+}
+
+    .carrierRegister .form {
+        color: #402e32;
+        padding: 2em;
+        max-width: 600px;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px 0 rgba(94, 94, 94, 0.21);
+        background-color: #ffffff;
+    }
+
 
 @media all and (min-width: 46.8em) {
   .cotization {

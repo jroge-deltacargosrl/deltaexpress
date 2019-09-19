@@ -13,6 +13,32 @@
     <link rel="stylesheet" href="~/css/bootstrap-flex.css">
     <link rel="stylesheet" href="~/css/style.css">
     <link href="~/css/myStyles.css" rel="stylesheet" />
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="shortcut icon" href="~/images/deltax-logo.ico" />
+
+    <environment include="Development">
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <link rel="shortcut icon" href="~/images/deltax-02.ico" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:200,400,500,600,700" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="~/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link href="~/css/bundle-styles.css" rel="stylesheet">
+
+
     <!-- Scroll -->
     <script src="~/js/smooth-scroll.min.js"></script>
     <script>
@@ -29,7 +55,7 @@
 <body>
     <!-- MENÚ -->
     <!--bootstrap-flex-->
-    <div class="container-fluid navbar-fixed-top"style="">
+    <div class="container-fluid navbar-fixed-top" style="">
         <div class="row menu-1 flex-items-xs-middle myNavbar">
             <img src="~/images/logoDeltaX.png" class="logo" />
             <div class="elements">
@@ -45,6 +71,16 @@
                 <div class="elementDiv">
                     <a data-scroll href="#sec-4" class="element" role="button" aria-pressed="true">Contacto</a>
                 </div>
+                @*
+        Provisional para seleccionar los contenedores de : soy cliente y soy transportista
+                *@
+                <div class="elementDiv">
+                    <a data-scroll href="#sec-4" class="element" role="button" aria-pressed="true">Cliente</a>
+                </div>
+                <div class="elementDiv">
+                    <a data-scroll href="#sec-5" class="element" role="button" aria-pressed="true">Transportista</a>
+                </div>
+
                 <div class="elementDiv">
                     <button data-scroll href="#sec-4" class="elementButton" role="button" aria-pressed="true">Iniciar sesión</button>
                 </div>
@@ -53,8 +89,8 @@
     </div>
     <!-- FIN MENU -->
     <!-- SECCIÓN 1 -->
-    <div class="container-fluid"style="height:100%;display:block;">
-        <div id="sec-1">
+    <div id="sec-1" class="slider-1">
+        <div>
             <div style="display:block;float:left;">
                 <h1>Revolucionamos el</h1>
                 <div style="display:flex;">
@@ -85,24 +121,256 @@
         </div>
     </div>
     <!-- FIN SECCIÓN -->
-    <!-- SECCIÓN 4 -->
-    <div class="container-fluid">
-        <div class="row flex-items-xs-center slider-4 flex-items-xs-middle" id="sec-4">
-            <div class="row">
-                <div class="col-xs-12"><h1>Suscríbete en Youtube (bluuweb)</h1></div>
-                <div class="col-xs-12"><h3>Sección 4</h3></div>
-            </div>
+    <!-- SECCIÓN 4 : Soy cliente-->
+    <div class="slider-4">
+        <div class="main home" id="sec-4" style="padding:0;">
+            <section class="cotization">
+                <div class="grid">
+                    <div class="col">
+                        <div class="heading">
+                            Revolucionamos el transporte de carga en Bolivia
+                        </div>
+                        <div class="subheading">
+                            Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.
+                            <br /><br />
+                            <h3>
+                                <b>
+                                    Cotiza nuestros servicios ahora!
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <form class="form cotization-form"
+                              asp-controller="Contact" asp-action="Contact"
+                              name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                            <input type="hidden" name="zf_redirect_url" value="">
+                            <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                            <input type="hidden" name="zc_gad" value="">
+                            <div class="form-row">
+                                <label for="company">Empresa</label>
+                                <input type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                            </div>
+                            <div class="form-row">
+                                <label for="fullname">Nombre Completo *</label>
+                                <input required type="text" name="fullname" placeholder="Ej. Juan Perez">
+                            </div>
+                            <div class="form-row">
+                                <label for="phone">Teléfono *</label>
+                                <input required type="text" name="phone" placeholder="Ej. 78099062">
+                            </div>
+                            <div class="form-row">
+
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Ej. example@gmail.com">
+                            </div>
+                            <div class="form-row">
+
+                                <label for="serviceType">Tipo de Servicio *</label>
+                                <select required name="serviceType">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1">Transporte Nacional</option>
+                                    <option value="2">Almacenamiento de Carga</option>
+                                </select>
+                            </div>
+                            <div class="grid form-row row-of-combos">
+                                <div class="col">
+                                    <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
+                                    <select required name="loadingSource" id="">
+                                        <option value="">Seleccionar</option>
+                                        <option value="SantaCruz">Santa Cruz</option>
+                                        <option value="LaPaz">La Paz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Chuquisaca">Chuquisaca</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Tarija">Tarija</option>
+                                        <option value="Beni">Beni</option>
+                                        <option value="Potosi">Potosi</option>
+                                        <option value="Pando">Pando</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
+                                    <select name="loadingDestination" id="">
+                                        <option value="">Seleccionar</option>
+                                        <option value="SantaCruz">Santa Cruz</option>
+                                        <option value="LaPaz">La Paz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Chuquisaca">Chuquisaca</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Tarija">Tarija</option>
+                                        <option value="Beni">Beni</option>
+                                        <option value="Potosi">Potosi</option>
+                                        <option value="Pando">Pando</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" onclick="return responseCotization();"
+                                        style="background:#ef9405; border-color:#ef9405;" class="btn btn-primary btn-lg btn-block">
+                                    Cotizar
+                                </button>
+                                @*<button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                            </div>
+                            <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
         </div>
+        @*<footer class="footer text-muted" style="position:relative;">
+            <div class="container" style="text-align:center;">
+                &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
+            </div>
+        </footer>*@
     </div>
     <!-- FIN SECCIÓN -->
-    <footer class="footer text-muted">
-        <div class="container" style="text-align:center;">
-            &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
+    <!-- SECCIÓN 5 : Soy Transportista-->
+    <div class="slider-4">
+        <div class="main home" id="sec-5" style="padding:0;">
+            <section class="carrierRegister">
+                <div class="grid">
+                    <div class="col">
+                        <form class="form carrierRegister-form"
+                              asp-controller="Contact" asp-action="Contact"
+                              name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                            <input type="hidden" name="zf_redirect_url" value="">
+                            <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                            <input type="hidden" name="zc_gad" value="">
+                            <div class="form-row">
+                                <label for="company">Empresa</label>
+                                <input type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                            </div>
+                            <div class="form-row">
+                                <label for="fullname">Nombre Completo *</label>
+                                <input required type="text" name="fullname" placeholder="Ej. Juan Perez">
+                            </div>
+                            <div class="form-row">
+                                <label for="phone">Teléfono *</label>
+                                <input required type="text" name="phone" placeholder="Ej. 78099062">
+                            </div>
+                            <div class="form-row">
+
+                                <label for="email">Email</label>
+                                <input type="text" name="email" placeholder="Ej. example@gmail.com">
+                            </div>
+                            <div class="form-row">
+
+                                <label for="serviceType">Tipo de Servicio *</label>
+                                <select required name="serviceType">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1">Transporte Nacional</option>
+                                    <option value="2">Almacenamiento de Carga</option>
+                                </select>
+                            </div>
+                            <div class="grid form-row row-of-combos">
+                                <div class="col">
+                                    <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
+                                    <select required name="loadingSource" id="">
+                                        <option value="">Seleccionar</option>
+                                        <option value="SantaCruz">Santa Cruz</option>
+                                        <option value="LaPaz">La Paz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Chuquisaca">Chuquisaca</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Tarija">Tarija</option>
+                                        <option value="Beni">Beni</option>
+                                        <option value="Potosi">Potosi</option>
+                                        <option value="Pando">Pando</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
+                                    <select name="loadingDestination" id="">
+                                        <option value="">Seleccionar</option>
+                                        <option value="SantaCruz">Santa Cruz</option>
+                                        <option value="LaPaz">La Paz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Chuquisaca">Chuquisaca</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Tarija">Tarija</option>
+                                        <option value="Beni">Beni</option>
+                                        <option value="Potosi">Potosi</option>
+                                        <option value="Pando">Pando</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" onclick="return responseCotization();"
+                                        style="background:#ef9405; border-color:#ef9405;" class="btn btn-primary btn-lg btn-block">
+                                    Cotizar
+                                </button>
+                                @*<button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                            </div>
+                            <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <div class="heading">
+                            Revolucionamos el transporte de carga en Bolivia
+                        </div>
+                        <div class="subheading">
+                            ¿Quiéres transportar carga con nosotros?
+                            <br /><br />
+                            <h3>
+                                <b>
+                                    Regístrate ahora!
+                                </b>
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
         </div>
-    </footer>
+        <footer class="footer text-muted" style="position:relative;">
+            <div class="container" style="text-align:center;">
+                &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/js/contact.js"></script>
+    @*<div class="container-fluid">
+            <div class="row flex-items-xs-center slider-4 flex-items-xs-middle">
+
+                <div class="row">
+
+
+        </div>
+        </div>
+        </div>*@
+    <!-- FIN SECCIÓN -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="~/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+    <script src="~/js/contact.js"></script>
 </body>
 </html>

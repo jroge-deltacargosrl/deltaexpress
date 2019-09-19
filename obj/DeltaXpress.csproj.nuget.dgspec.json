@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo X\\Landing Page\\delta-express\\DeltaXpress.csproj": {}
+    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaXpress\\DeltaXpress.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo X\\Landing Page\\delta-express\\DeltaXpress.csproj": {
+    "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaXpress\\DeltaXpress.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo X\\Landing Page\\delta-express\\DeltaXpress.csproj",
+        "projectUniqueName": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaXpress\\DeltaXpress.csproj",
         "projectName": "DeltaXpress",
-        "projectPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo X\\Landing Page\\delta-express\\DeltaXpress.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Desktop\\DeltaCargo\\Delta Cargo X\\Landing Page\\delta-express\\obj\\",
+        "projectPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaXpress\\DeltaXpress.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\Documentacion Trabajo\\DELTA CARGO\\Implementacion\\DeltaXpress\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
