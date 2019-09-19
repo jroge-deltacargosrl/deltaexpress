@@ -1,6 +1,10 @@
-body{
-    height:100%;
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 .logo {
     width: 200px;
 }
@@ -15,7 +19,7 @@ body{
 .elements {
     width: 500px;
     float: right;
-    padding-left: 50%;
+    padding-left: 49%;
     display: flex;
 }
 
@@ -31,8 +35,9 @@ body{
     margin: 0;
 }
 
-.elementButton {
-    width: 107px;
+.btnLogIn {
+    width: 115%;
+    background-color:lightgray;
 }
 
 @keyframes parpadeo {
@@ -51,33 +56,127 @@ body{
     }
 
     to {
-        width: 0
+        width: 0;
     }
 }
 
-h1 {
-    color: black;
-    position: relative;
-    background-color: #ec9404;
-    padding: 15px;
+.slider-1 {
+    background-color: white;
 }
 
-.h12 {
-    padding: 15px 0px 15px 15px;
-}
-
-h1 .span1 {
-    position: absolute;
-    right: 0;
-    width: 0;
-    height: 50px;
-    border-left: 3px solid white;
-    background-color: #ec9404;
-    box-sizing: border-box;
-    animation: escribiendo 3s steps(15) infinite;
-}
-#sec-1 {
+.divContainer {
+    padding: 5% 0 0 0;
     display: flex;
-    margin-top: 15%;
-    height:100%;
+}
+
+#sec-1 .text {
+    margin-top: 8%;
+    margin-left: 10%;
+    float: left;
+    text-align: left;
+}
+
+    #sec-1 .text h1 {
+        padding: 0;
+        margin: 10px 0;
+        color: black;
+        position: relative;
+    }
+
+    #sec-1 .text .h12 {
+        padding: 0 25px 4px 0;
+        margin: 10px 0;
+        background-color: #ec9404;
+        position: relative;
+    }
+
+    #sec-1 .text h1 .span1 {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 52px;
+        border-left: 2px solid #ec9404;
+        background-color: white;
+        box-sizing: border-box;
+        animation: escribiendo 4s steps(11) infinite;
+    }
+
+    #sec-1 .text .btn {
+        margin-top: 10%;
+        padding:1px;
+        width: 40%;
+        background-color: #ec9404;
+    }
+
+    #sec-1 .text .btnSoyCliente {
+        width: 40%;
+    }
+
+    #sec-1 .text .btnSoyCliente a {
+        text-decoration:none;
+    }
+
+    #sec-1 .text .btnSoyTransportista {
+        margin-left: 10%;
+    }
+
+    #sec-1 .text .btnSoyTransportista a{
+        text-decoration:none;
+    }
+
+#sec-2 .img {
+    width: 35%;
+    height: 5%;
+    float: left;
+    margin: 8% 8% 0% 8%;
+}
+
+#sec-2 .divOptions {
+    width: 45%;
+    margin: 0;
+    margin-top: 8%;
+}
+
+    #sec-2 .divOptions * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: black;
+    }
+
+    #sec-2 .divOptions .tabs {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        border: solid black;
+        border-right: none;
+    }
+
+        #sec-2 .divOptions .tabs li {
+            width: 100%;
+            text-align: center;
+            border-right: solid black;
+        }
+
+            #sec-2 .divOptions .tabs li a {
+                margin: 0;
+                padding: 1% 34%;
+                width: 100%;
+                text-decoration: none;
+            }
+
+    #sec-2 .divOptions .tabContents {
+        width: 100%;
+    }
+
+        #sec-2 .divOptions .tabContents p {
+            text-align: justify;
+        }
+
+.active {
+    /*Para el li*/
+    background-color: #ec9404;
+}
+
+@media screen and (max-width: 500px) {
 }

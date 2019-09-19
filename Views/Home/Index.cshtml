@@ -8,11 +8,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>SmoothScroll</title>
+    <title>DeltaX</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/css/bootstrap-flex.css">
     <link rel="stylesheet" href="~/css/style.css">
-    <link href="~/css/myStyles.css" rel="stylesheet" />
 
 
 
@@ -51,13 +50,16 @@
             callback: function (anchor, toggle) { } // Function to run after scrolling
         });
     </script>
+    <link href="~/css/myStyles.css" rel="stylesheet" />
+    <script src="~/js/myScripts.js"></script>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <!-- MENÚ -->
     <!--bootstrap-flex-->
     <div class="container-fluid navbar-fixed-top" style="">
         <div class="row menu-1 flex-items-xs-middle myNavbar">
-            <img src="~/images/logoDeltaX.png" class="logo" />
+            <img src="~/images/logoDeltaX.png" class="logo"/>
             <div class="elements">
                 <div class="elementDiv">
                     <a data-scroll href="#sec-1" class="element" role="button" aria-pressed="true">Inicio</a>
@@ -72,41 +74,59 @@
                     <a data-scroll href="#sec-4" class="element" role="button" aria-pressed="true">Contacto</a>
                 </div>
                 @*
-        Provisional para seleccionar los contenedores de : soy cliente y soy transportista
+                Provisional para seleccionar los contenedores de : soy cliente y soy transportista
                 *@
                 <div class="elementDiv">
-                    <a data-scroll href="#sec-4" class="element" role="button" aria-pressed="true">Cliente</a>
-                </div>
-                <div class="elementDiv">
-                    <a data-scroll href="#sec-5" class="element" role="button" aria-pressed="true">Transportista</a>
-                </div>
-
-                <div class="elementDiv">
-                    <button data-scroll href="#sec-4" class="elementButton" role="button" aria-pressed="true">Iniciar sesión</button>
+                    <button data-scroll href="#sec-4" class="btn btnLogIn" role="button" aria-pressed="true">Iniciar sesión</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- FIN MENU -->
     <!-- SECCIÓN 1 -->
-    <div id="sec-1" class="slider-1">
-        <div>
-            <div style="display:block;float:left;">
+    <div class="slider-1" id="sec-1">
+        <div class="divContainer">
+            <div class="text">
                 <h1>Revolucionamos el</h1>
                 <div style="display:flex;">
-                    <h1 class="h12">Transporte.<span class="span1">&nbsp;</span></h1><h1>de carga en</h1>
+                    <h1 class="h12"><b>Transporte</b><span class="span1">&nbsp;</span></h1><h1>de carga en</h1>
                 </div>
                 <h1>Bolivia</h1>
+                <button class="btn btnSoyCliente"><a data-scroll href="#sec-4">Soy cliente</a></button>
+                <button class="btn btnSoyTransportista"><a data-scroll href="#sec-5">Soy transportista</a></button>
             </div>
         </div>
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 2 -->
-    <div class="container-fluid">
-        <div class="row flex-items-xs-center slider-2 flex-items-xs-middle" id="sec-2">
-            <div class="row">
-                <div class="col-xs-12"><h1>Desarrollado con Bootstrap 4 beta</h1></div>
-                <div class="col-xs-12"><h3>Sección 2</h3></div>
+    <div class="slider-1" id="sec-2">
+        <div class="divContainer">
+            <img id="tab1img" src="~/images/logoDeltaX.png" class="img" />
+            <img id="tab2img" src="~/images/mas-seguro.jpg" class="img" />
+            <img id="tab3img" src="~/images/whatsapp.png" class="img" />
+            <div class="divOptions">
+                <ul class="tabs">
+                    <li id="li1"><a href="#tab1"><span>Opcion1</span></a></li>
+                    <li id="li2"><a href="#tab2"><span>Opcion2</span></a></li>
+                    <li id="li3"><a href="#tab3"><span>Opcion3</span></a></li>
+                </ul>
+                <div class="tabContents">
+                    <article id="tab1">
+                        <p>
+                            texto opcion 1
+                        </p>
+                    </article>
+                    <article id="tab2">
+                        <p>
+                            texto opcion 2
+                        </p>
+                    </article>
+                    <article id="tab3">
+                        <p>
+                            texto opcion 3
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     </div>
@@ -125,7 +145,7 @@
     <div class="slider-4">
         <div class="main home" id="sec-4" style="padding:0;">
             <section class="cotization">
-                <div class="grid">
+                <div class="grid"style="margin-top:5%;">
                     <div class="col">
                         <div class="heading">
                             Revolucionamos el transporte de carga en Bolivia
@@ -140,7 +160,7 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col"">
                         <form class="form cotization-form"
                               asp-controller="Contact" asp-action="Contact"
                               name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
@@ -217,20 +237,19 @@
                     </div>
                 </div>
             </section>
-
+            @*<footer class="footer text-muted" style="position:relative;">
+                <div class="container" style="text-align:center;">
+                    &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
+                </div>
+            </footer>*@
         </div>
-        @*<footer class="footer text-muted" style="position:relative;">
-            <div class="container" style="text-align:center;">
-                &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
-            </div>
-        </footer>*@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 5 : Soy Transportista-->
     <div class="slider-4">
         <div class="main home" id="sec-5" style="padding:0;">
             <section class="carrierRegister">
-                <div class="grid">
+                <div class="grid"style="margin-top:5%;">
                     <div class="col">
                         <form class="form carrierRegister-form"
                               asp-controller="Contact" asp-action="Contact"
@@ -334,14 +353,14 @@
 
     <script src="~/js/contact.js"></script>
     @*<div class="container-fluid">
-            <div class="row flex-items-xs-center slider-4 flex-items-xs-middle">
+        <div class="row flex-items-xs-center slider-4 flex-items-xs-middle">
 
-                <div class="row">
+            <div class="row">
 
 
+            </div>
         </div>
-        </div>
-        </div>*@
+    </div>*@
     <!-- FIN SECCIÓN -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
