@@ -19,7 +19,7 @@ body {
 .elements {
     width: 500px;
     float: right;
-    padding-left:55%;
+    padding-left: 55%;
     display: flex;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .btnLogIn {
     width: 115%;
-    background-color:lightgray;
+    background-color: lightgray;
 }
 
 @keyframes parpadeo {
@@ -66,7 +66,7 @@ body {
 
 .divContainer {
     padding: 6% 0 0 0;
-    display:flex;
+    display: flex;
 }
 
 #sec-1 .text {
@@ -75,6 +75,10 @@ body {
     float: left;
     text-align: left;
 }
+
+    #sec-1 .text div {
+        display: flex;
+    }
 
     #sec-1 .text h1 {
         padding: 0;
@@ -103,7 +107,7 @@ body {
 
     #sec-1 .text .btn {
         margin-top: 10%;
-        padding:1px;
+        padding: 1px;
         width: 40%;
         background-color: #ec9404;
     }
@@ -112,17 +116,17 @@ body {
         width: 40%;
     }
 
-    #sec-1 .text .btnSoyCliente a {
-        text-decoration:none;
-    }
+        #sec-1 .text .btnSoyCliente a {
+            text-decoration: none;
+        }
 
     #sec-1 .text .btnSoyTransportista {
         margin-left: 10%;
     }
 
-    #sec-1 .text .btnSoyTransportista a{
-        text-decoration:none;
-    }
+        #sec-1 .text .btnSoyTransportista a {
+            text-decoration: none;
+        }
 
 #sec-2 .img {
     width: 35%;
@@ -177,10 +181,102 @@ body {
     /*Para el li*/
     background-color: #ec9404;
 }
+
 #sec-3 .divPerson {
     padding: 0;
     margin: 0;
 }
 
 @media screen and (max-width: 500px) {
+    div {
+        width: 80%;
+    }
+
+    .myNavbar {
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        display: block;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .elements {
+        margin: 0;
+        margin-top: 5%;
+        padding: 0;
+        width: 100%;
+    }
+
+        .elements .elementDiv {
+            margin: 0;
+            padding: 0;
+            padding-left: 3%;
+            padding-right: 3%;
+            width: auto;
+        }
+
+            .elements .elementDiv .element {
+                margin: 0;
+                padding: 0;
+                font-size: 75%;
+            }
+
+    .navbar-fixed-top {
+        margin: 0;
+        padding: 0;
+    }
+
+    .btnLogIn {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        width: 115%;
+        background-color: lightgray;
+    }
+
+    .divContainer {
+        width: 100%;
+        margin: 0;
+        padding: 45% 0 0 0;
+        display: flex;
+    }
+
+    #sec-1 .text {
+        margin: 0;
+        width: 100%;
+    }
+
+        #sec-1 .text div {
+            margin: 0 0 0 10%;
+            height: 15%;
+            display: block;
+        }
+
+        #sec-1 .text h1 {
+            margin: 0 0 0 10%;
+            font-size: 150%;
+            width: 100%;
+        }
+
+        #sec-1 .text .h12 {
+            padding: 0;
+            margin: 0;
+            font-size: 150%;
+            width:60%;
+        }
+
+            #sec-1 .text .h12 .span1 {
+                height: 31px;
+                padding:0;
+                margin:0;
+                margin-top:-1%;
+            }
+        #sec-1 .text div h1{
+
+        }
 }
