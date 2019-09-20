@@ -1681,7 +1681,7 @@ footer {
 
 @media all and (min-width: 46.8em) {
   .cotization {
-    padding: 4em 12%; }
+    padding: 1em 5%; }
   .cotization .grid .col:first-child {
     margin-right: 2em; }
   .cotization .grid .col:last-child {
