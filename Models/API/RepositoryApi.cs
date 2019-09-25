@@ -13,6 +13,7 @@ namespace DeltaXpress.Models.API
     public class RepositoryApi<T>:IRepositoryCrud<T>
     {
         private readonly RequestAPI requestApi;
+
         private string resource;
 
         public RepositoryApi()

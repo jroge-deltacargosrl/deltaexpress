@@ -57,3 +57,4 @@ C:\Users\hp\Desktop\DeltaCargo\Delta Cargo X\Landing Page\delta-express\obj\Debu
 C:\Users\hp\Desktop\DeltaCargo\Delta Cargo X\Landing Page\delta-express\obj\Debug\netcoreapp2.2\DeltaXpress.dll
 C:\Users\hp\Desktop\DeltaCargo\Delta Cargo X\Landing Page\delta-express\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
 C:\Users\hp\Desktop\DeltaCargo\Delta Cargo X\Landing Page\delta-express\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete
+E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csprojAssemblyReference.cache
