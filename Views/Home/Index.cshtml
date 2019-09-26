@@ -74,7 +74,7 @@
             <div class="text">
                 <h1>Revolucionamos el</h1>
                 <div>
-                    <h1 class="h12"><b>Transporte</b><span class="span1">&nbsp;</span></h1>
+                    <h1 id="dinamicText"></h1>
                     <h1>de carga en</h1>
                 </div>
                 <h1>Bolivia</h1>
@@ -85,7 +85,7 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 2 : Tecnología-->
-    <div class="slider-1" id="sec-2">
+    <div class="slider-2" id="sec-2">
         <div class="divContainer">
             <img id="tab1img" src="~/images/logoDeltaX.png" class="img" />
             <img id="tab2img" src="~/images/mas-seguro.jpg" class="img" />
@@ -155,7 +155,7 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 4 : Soy cliente-->
-    <div class="slider-1" id="sec-4">
+    <div class="slider-1 divContainerForm" id="sec-4">
         <div class="divContainer">
             <div class="col colTxt">
                 <h2>Revolucionamos el transporte de carga en Bolivia</h2>
@@ -238,45 +238,42 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 5 : Soy Transportista-->
-    <div class="slider-4">
-        <div class="main home" id="sec-5" style="padding:0;">
-            <section class="carrierRegister">
-                <div class="grid" style="margin-top:5%;">
-                    <div class="col">
-                        <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-                            <input type="hidden" name="zf_redirect_url" value="">
-                            <!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-                            <input type="hidden" name="zc_gad" value="">
-                            <div class="form-row">
-                                <label for="company">Empresa</label>
-                                <input type="text" name="company" placeholder="Ej. Delta Cargo SRL">
-                            </div>
-                            <div class="form-row">
-                                <label for="fullname">Nombre Completo *</label>
-                                <input required type="text" name="fullname" placeholder="Ej. Juan Perez">
-                            </div>
-                            <div class="form-row">
-                                <label for="phone">Teléfono *</label>
-                                <input required type="text" name="phone" placeholder="Ej. 78099062">
-                            </div>
-                            <div class="form-row">
+    <div class="slider-1 divContainerForm" id="sec-5">
+        <div class="divContainer">
+            <div class="col colForm">
+                <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                    <input type="hidden" name="zf_redirect_url" value="">
+                    <input type="hidden" name="zc_gad" value="">
+                    <div class="form-row">
+                        <label for="company">Empresa</label>
+                        <input type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                    </div>
+                    <div class="form-row">
+                        <label for="fullname">Nombre Completo *</label>
+                        <input required type="text" name="fullname" placeholder="Ej. Juan Perez">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Teléfono *</label>
+                        <input required type="text" name="phone" placeholder="Ej. 78099062">
+                    </div>
+                    <div class="form-row">
 
-                                <label for="email">Email</label>
-                                <input type="text" name="email" placeholder="Ej. example@gmail.com">
-                            </div>
-                            <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="Ej. example@gmail.com">
+                    </div>
+                    <div class="form-row">
 
-                                <label for="serviceType">Tipo de Servicio *</label>
-                                <select required name="serviceType">
+                        <label for="serviceType">Tipo de Servicio *</label>
+                        <select required name="serviceType">
                                     <option value="">Seleccionar</option>
                                     <option value="1">Transporte Nacional</option>
                                     <option value="2">Almacenamiento de Carga</option>
                                 </select>
-                            </div>
-                            <div class="grid form-row row-of-combos">
-                                <div class="col">
-                                    <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
-                                    <select required name="loadingSource" id="">
+                    </div>
+                    <div class="grid form-row row-of-combos">
+                        <div class="col">
+                            <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
+                            <select required name="loadingSource" id="">
                                         <option value="">Seleccionar</option>
                                         <option value="SantaCruz">Santa Cruz</option>
                                         <option value="LaPaz">La Paz</option>
@@ -288,10 +285,10 @@
                                         <option value="Potosi">Potosi</option>
                                         <option value="Pando">Pando</option>
                                     </select>
-                                </div>
-                                <div class="col">
-                                    <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
-                                    <select name="loadingDestination" id="">
+                        </div>
+                        <div class="col">
+                            <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
+                            <select name="loadingDestination" id="">
                                         <option value="">Seleccionar</option>
                                         <option value="SantaCruz">Santa Cruz</option>
                                         <option value="LaPaz">La Paz</option>
@@ -303,43 +300,43 @@
                                         <option value="Potosi">Potosi</option>
                                         <option value="Pando">Pando</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
                                     <a style="color:white;text-decoration:none;">
                                         Cotizar
                                     </a>
                                 </button> @*
-                                <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                        <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
                             </div>
                             <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
                         </form>
-                    </div>
-                    <div class="col">
-                        <div class="heading">
-                            Revolucionamos el transporte de carga en Bolivia
-                        </div>
-                        <div class="subheading">
-                            ¿Quiéres transportar carga con nosotros?
-                            <br /><br />
-                            <h3>
-                                <b>
-                                    Regístrate ahora!
-                                </b>
-                            </h3>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-
-        </div>
-        <footer class="footer text-muted" style="position:relative;">
-            <div class="container" style="text-align:center;">
-                &copy; Copyright Delta Express - <a style="color:white; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index">2019</a>
+                <div class="col colTxt">
+                    <h2>Revolucionamos el transporte de carga en Bolivia</h2>
+                    <p>¿Quiéres transportar carga con nosotros?</p>
+                    <p><b>Regístrate ahora!</b></p>
+                </div>
+            </div>
+    </div>
+        <footer class="footer myFooter">
+            <div class="col">
+                <img src="..\images\logoDeltaX.png"class="logoFooter">
+            </div>
+            <div class="col">
+                <div class="divContactUs">
+                    <h3>Contáctanos</h3>
+                    <img src="../images/icons/whatsapp48px.png">
+                    <img src="../images/icons/linkedin48px.png">
+                </div>
             </div>
         </footer>
+        <footer class="footer text-muted" style="position:relative;">
+                <div class="container" style="text-align:center;">
+                    &copy; Copyright Delta Express - 2019
+                </div>
+            </footer>
     </div>
     <script src="~/js/contact.js"></script>
     <!-- FIN SECCIÓN -->
