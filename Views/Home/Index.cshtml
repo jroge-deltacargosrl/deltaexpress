@@ -1,7 +1,4 @@
-﻿@{ Layout = null;
-
-
-}
+﻿@{ Layout = null; }
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,7 +18,7 @@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+            crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="shortcut icon" href="~/images/deltax-02.ico" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -40,7 +37,7 @@
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callback: function (anchor, toggle) { } // Function to run after scrolling
+            callback: function(anchor, toggle) {} // Function to run after scrolling
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
@@ -51,7 +48,7 @@
 <body>
     <!-- MENÚ -->
     <!--bootstrap-flex-->
-    <div class="container-fluid navbar-fixed-top">
+    <!-- <div class="container-fluid navbar-fixed-top">
         <div class="row menu-1 flex-items-xs-middle myNavbar">
             <img src="~/images/logoDeltaX.png" class="logo" />
             <div class="elements">
@@ -69,33 +66,47 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="container-fluid navbar-fixed-top myNavbar">
+        <nav class="navbar navbar-expand-lg nav-tabs myColorNavbar">
+            <img src="~/images/logoDeltaX.png" class="logo" />
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link" href="#sec-1">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link" href="#sec-2">Tecnologia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll href="#sec-5" class="nav-link" role="button" aria-pressed="true">Contacto</a>
+                    </li>
+                    <li class="nav-item elementDiv">
+                        <button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <!-- FIN MENU -->
     <!-- SECCIÓN 1 : Inicio-->
     <div class="slider-1" id="sec-1">
         <div class="divContainer">
             <div class="text">
-                @*<h1>Revolucionamos el</h1>
-                    <div>
-                        <h1 id="dinamicText"></h1>
-                        <h1>de carga en</h1>
-                    </div>
-                    <h1>Bolivia</h1>
-                *@
-
                 <h1>
-                    Revolucionamos el <br />
-                    <span class="typer" style="color:white; background-color:orange;" id="main" data-words="Transporte,Almacenamiento"
-                          data-delay="100" data-deleteDelay="1000">
+                    Revolucionamos el <br/>
+                </h1>
+                <h1>
+                    <span class="typer" id="main" data-words="Transporte,Almacenamiento" data-delay="100" data-deleteDelay="1000">
                     </span>
                     <span class="cursor" data-owner="main"></span>
                 </h1>
                 <h1>de carga en Latinomérica</h1>
                 <button class="btn btnDelta btnSoyCliente">
-                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-4">Soy cliente</a></b>
+                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-5">Soy cliente</a></b>
                 </button>
                 <button class="btn btnDelta">
-                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-5">Soy transportista</a></b>
+                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-4">Soy transportista</a></b>
                 </button>
             </div>
         </div>
@@ -176,12 +187,14 @@
         <div class="divContainer">
             <div class="col colTxt">
                 <h1>Revolucionamos el transporte de carga en Bolivia</h1>
-                @*<p><b>Cotiza nuestros servicios ahora!</b></p>*@
+                @*
+                <p><b>Cotiza nuestros servicios ahora!</b></p>*@
                 <p>Cotiza nuestros servicios ahora!</p>
                 <div>
                     <img class="imgForms" src="~/images/form_transportista.jpg" alt="Imagen no cargada" />
                 </div>
-                @*<h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
+                @*
+                <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
 
 
             </div>
@@ -331,7 +344,7 @@
                                 Cotizar
                             </a>
                         </button> @*
-                            <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                        <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
                     </div>
                     <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
                 </form>
@@ -348,20 +361,32 @@
             </div>
         </div>
     </div>
-    <footer class="footer myFooter">
-        <div class="col">
-            <img src="..\images\logoDeltaX.png" class="logoFooter">
-        </div>
-        <div class="col">
-            <div class="divContactUs">
-                <h3>Contáctanos</h3>
-                <img src="~/images/whatsapp (2).png">
-                <img src="~/images/linkedin (3).png">
+    <!-- <footer class="footer text-muted footer2">
+        <div class="container footer1" style="text-align:center;">
+            <div class="col">
+                <img src="..\images\logoDeltaX.png" class="logoFooter">
+            </div>
+            <div class="col">
+                <div class="divContactUs">
+                    <h3>Contáctanos</h3>
+                    <img src="~/images/whatsapp (2).png">
+                    <img src="~/images/linkedin (3).png">
+                </div>
             </div>
         </div>
-    </footer>
-    <footer class="footer text-muted" style="position:relative;">
-        <div class="container" style="text-align:center;">
+    </footer> -->
+    <footer class="footer text-muted footer1 footer2" style="position:relative;">
+                <img src="..\images\logoDeltaX.png" class="logoFooter">
+                <div class="col">
+                    <div class="divContactUs">
+                        <h3>Contáctanos</h3>
+                        <img src="~/images/whatsapp (2).png">
+                        <img src="~/images/linkedin (3).png">
+                    </div>
+            </div>
+        </footer>
+    <footer class="footer text-muted footer1" style="position:relative;">
+        <div class="container" style="text-align:center;background-color: white;">
             &copy; Copyright Delta Express - 2019
         </div>
     </footer>
@@ -395,5 +420,6 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
     <script src="~/js/contact.js"></script>
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    <link href="~/css/myStyles.css" rel="stylesheet" />
 </body>
 </html>
