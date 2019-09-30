@@ -15,6 +15,7 @@ $(document).ready(function () {
         $(activeImg).show();
         return false;
     });
+
     function sleep(milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {
@@ -23,7 +24,9 @@ $(document).ready(function () {
          }
         }
        }
-    var palabras=["ABC","DEF"];
+
+
+    var palabras = ["ABC", "DEF"];
     var letterTime=1000;
     var wordTime=2000;
     var texto=$('#dinamicText');

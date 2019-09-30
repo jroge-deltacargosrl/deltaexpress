@@ -1,4 +1,7 @@
-﻿@{ Layout = null; }
+﻿@{ Layout = null;
+
+
+}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Delta Express</title>
+    <title>Home | Delta Express</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/css/bootstrap-flex.css">
     <link rel="stylesheet" href="~/css/style.css">
@@ -18,7 +21,7 @@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-            crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+              crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="shortcut icon" href="~/images/deltax-02.ico" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -37,7 +40,7 @@
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callback: function(anchor, toggle) {} // Function to run after scrolling
+            callback: function (anchor, toggle) { } // Function to run after scrolling
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
@@ -72,14 +75,28 @@
     <div class="slider-1" id="sec-1">
         <div class="divContainer">
             <div class="text">
-                <h1>Revolucionamos el</h1>
-                <div>
-                    <h1 id="dinamicText"></h1>
-                    <h1>de carga en</h1>
-                </div>
-                <h1>Bolivia</h1>
-                <button class="btn btnDelta btnSoyCliente"><a style="color:white;text-decoration:none;" data-scroll href="#sec-4">Soy cliente</a></button>
-                <button class="btn btnDelta"><a style="color:white;text-decoration:none;" data-scroll href="#sec-5">Soy transportista</a></button>
+                @*<h1>Revolucionamos el</h1>
+                    <div>
+                        <h1 id="dinamicText"></h1>
+                        <h1>de carga en</h1>
+                    </div>
+                    <h1>Bolivia</h1>
+                *@
+
+                <h1>
+                    Revolucionamos el <br />
+                    <span class="typer" style="color:white; background-color:orange;" id="main" data-words="Transporte,Almacenamiento"
+                          data-delay="100" data-deleteDelay="1000">
+                    </span>
+                    <span class="cursor" data-owner="main"></span>
+                </h1>
+                <h1>de carga en Latinomérica</h1>
+                <button class="btn btnDelta btnSoyCliente">
+                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-4">Soy cliente</a></b>
+                </button>
+                <button class="btn btnDelta">
+                    <b><a style="color:white;text-decoration:none;" data-scroll href="#sec-5">Soy transportista</a></b>
+                </button>
             </div>
         </div>
     </div>
@@ -87,9 +104,9 @@
     <!-- SECCIÓN 2 : Tecnología-->
     <div class="slider-2" id="sec-2">
         <div class="divContainer">
-            <img id="tab1img" src="~/images/logoDeltaX.png" class="img" />
-            <img id="tab2img" src="~/images/mas-seguro.jpg" class="img" />
-            <img id="tab3img" src="~/images/whatsapp.png" class="img" />
+            <img id="tab1img" src="~/images/sunset-3702905.jpg" class="img" />
+            <img id="tab2img" src="~/images/1500x844_optimizar_rutas_transporte.jpg" class="img" />
+            <img id="tab3img" src="~/images/shutterstock_114034636.jpg" class="img" />
             <!--
             <div class="bd-example myCarousel"style="width:80%;margin:0 auto 0 auto;">
                 <div id="carouselExampleCaptions" class="carousel slide myCarouselElement" data-ride="carousel">
@@ -155,12 +172,18 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 4 : Soy cliente-->
-    <div class="slider-1 divContainerForm" id="sec-4">
+    <div class="slider-2 divContainerForm" id="sec-4">
         <div class="divContainer">
             <div class="col colTxt">
-                <h2>Revolucionamos el transporte de carga en Bolivia</h2>
-                <p>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</p>
-                <p><b>Cotiza nuestros servicios ahora!</b></p>
+                <h1>Revolucionamos el transporte de carga en Bolivia</h1>
+                @*<p><b>Cotiza nuestros servicios ahora!</b></p>*@
+                <p>Cotiza nuestros servicios ahora!</p>
+                <div>
+                    <img class="imgForms" src="~/images/form_transportista.jpg" alt="Imagen no cargada" />
+                </div>
+                @*<h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
+
+
             </div>
             <div class="col colForm">
                 <form class="form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
@@ -187,49 +210,49 @@
 
                         <label for="serviceType">Tipo de Servicio *</label>
                         <select required name="serviceType">
-                          <option value="">Seleccionar</option>
-                          <option value="1">Transporte Nacional</option>
-                          <option value="2">Almacenamiento de Carga</option>
-                      </select>
+                            <option value="">Seleccionar</option>
+                            <option value="1">Transporte Nacional</option>
+                            <option value="2">Almacenamiento de Carga</option>
+                        </select>
                     </div>
                     <div class="grid form-row row-of-combos">
                         <div class="col">
                             <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
                             <select required name="loadingSource" id="">
-                              <option value="">Seleccionar</option>
-                              <option value="SantaCruz">Santa Cruz</option>
-                              <option value="LaPaz">La Paz</option>
-                              <option value="Cochabamba">Cochabamba</option>
-                              <option value="Chuquisaca">Chuquisaca</option>
-                              <option value="Oruro">Oruro</option>
-                              <option value="Tarija">Tarija</option>
-                              <option value="Beni">Beni</option>
-                              <option value="Potosi">Potosi</option>
-                              <option value="Pando">Pando</option>
-                          </select>
+                                <option value="">Seleccionar</option>
+                                <option value="SantaCruz">Santa Cruz</option>
+                                <option value="LaPaz">La Paz</option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="ElAlto">El Alto</option>
+                                <option value="Potosi">Potosi</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Tarija">Tarija</option>
+                                <option value="Trinidad">Trinidad</option>
+                            </select>
                         </div>
                         <div class="col">
                             <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
                             <select name="loadingDestination" id="">
-                              <option value="">Seleccionar</option>
-                              <option value="SantaCruz">Santa Cruz</option>
-                              <option value="LaPaz">La Paz</option>
-                              <option value="Cochabamba">Cochabamba</option>
-                              <option value="Chuquisaca">Chuquisaca</option>
-                              <option value="Oruro">Oruro</option>
-                              <option value="Tarija">Tarija</option>
-                              <option value="Beni">Beni</option>
-                              <option value="Potosi">Potosi</option>
-                              <option value="Pando">Pando</option>
-                          </select>
+                                <option value="">Seleccionar</option>
+                                <option value="SantaCruz">Santa Cruz</option>
+                                <option value="LaPaz">La Paz</option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="ElAlto">El Alto</option>
+                                <option value="Potosi">Potosi</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Tarija">Tarija</option>
+                                <option value="Trinidad">Trinidad</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
-                          <a style="color:white;text-decoration:none;">
-                              Cotizar
-                          </a>
-                      </button>
+                            <a style="color:white;text-decoration:none;">
+                                Cotizar
+                            </a>
+                        </button>
                     </div>
                     <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
                 </form>
@@ -238,7 +261,7 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 5 : Soy Transportista-->
-    <div class="slider-1 divContainerForm" id="sec-5">
+    <div class="slider-2 divContainerForm" id="sec-5">
         <div class="divContainer">
             <div class="col colForm">
                 <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
@@ -265,79 +288,83 @@
 
                         <label for="serviceType">Tipo de Servicio *</label>
                         <select required name="serviceType">
-                                    <option value="">Seleccionar</option>
-                                    <option value="1">Transporte Nacional</option>
-                                    <option value="2">Almacenamiento de Carga</option>
-                                </select>
+                            <option value="">Seleccionar</option>
+                            <option value="1">Transporte Nacional</option>
+                            <option value="2">Almacenamiento de Carga</option>
+                        </select>
                     </div>
                     <div class="grid form-row row-of-combos">
                         <div class="col">
                             <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
                             <select required name="loadingSource" id="">
-                                        <option value="">Seleccionar</option>
-                                        <option value="SantaCruz">Santa Cruz</option>
-                                        <option value="LaPaz">La Paz</option>
-                                        <option value="Cochabamba">Cochabamba</option>
-                                        <option value="Chuquisaca">Chuquisaca</option>
-                                        <option value="Oruro">Oruro</option>
-                                        <option value="Tarija">Tarija</option>
-                                        <option value="Beni">Beni</option>
-                                        <option value="Potosi">Potosi</option>
-                                        <option value="Pando">Pando</option>
-                                    </select>
+                                <option value="">Seleccionar</option>
+                                <option value="SantaCruz">Santa Cruz</option>
+                                <option value="LaPaz">La Paz</option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="Chuquisaca">Chuquisaca</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Tarija">Tarija</option>
+                                <option value="Beni">Beni</option>
+                                <option value="Potosi">Potosi</option>
+                                <option value="Pando">Pando</option>
+                            </select>
                         </div>
                         <div class="col">
                             <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
                             <select name="loadingDestination" id="">
-                                        <option value="">Seleccionar</option>
-                                        <option value="SantaCruz">Santa Cruz</option>
-                                        <option value="LaPaz">La Paz</option>
-                                        <option value="Cochabamba">Cochabamba</option>
-                                        <option value="Chuquisaca">Chuquisaca</option>
-                                        <option value="Oruro">Oruro</option>
-                                        <option value="Tarija">Tarija</option>
-                                        <option value="Beni">Beni</option>
-                                        <option value="Potosi">Potosi</option>
-                                        <option value="Pando">Pando</option>
-                                    </select>
+                                <option value="">Seleccionar</option>
+                                <option value="SantaCruz">Santa Cruz</option>
+                                <option value="LaPaz">La Paz</option>
+                                <option value="Cochabamba">Cochabamba</option>
+                                <option value="Chuquisaca">Chuquisaca</option>
+                                <option value="Oruro">Oruro</option>
+                                <option value="Tarija">Tarija</option>
+                                <option value="Beni">Beni</option>
+                                <option value="Potosi">Potosi</option>
+                                <option value="Pando">Pando</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
-                                    <a style="color:white;text-decoration:none;">
-                                        Cotizar
-                                    </a>
-                                </button> @*
-                        <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
-                            </div>
-                            <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
-                        </form>
-                </div>
-                <div class="col colTxt">
-                    <h2>Revolucionamos el transporte de carga en Bolivia</h2>
-                    <p>¿Quiéres transportar carga con nosotros?</p>
-                    <p><b>Regístrate ahora!</b></p>
-                </div>
+                            <a style="color:white;text-decoration:none;">
+                                Cotizar
+                            </a>
+                        </button> @*
+                            <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                    </div>
+                    <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
+                </form>
             </div>
+            <div class="col colTxt">
+                <h2>Revolucionamos el transporte de carga en Bolivia</h2>
+                <p>Regístrate ahora!</p>
+                @*<p>¿Quiéres transportar carga con nosotros?</p>
+                    <p><b>Regístrate ahora!</b></p>*@
+                <div>
+                    <img class="imgForms" src="~/images/form_cliente.jpg" alt="Imagen no cargada" />
+                </div>
+
+            </div>
+        </div>
     </div>
-        <footer class="footer myFooter">
-            <div class="col">
-                <img src="..\images\logoDeltaX.png"class="logoFooter">
+    <footer class="footer myFooter">
+        <div class="col">
+            <img src="..\images\logoDeltaX.png" class="logoFooter">
+        </div>
+        <div class="col">
+            <div class="divContactUs">
+                <h3>Contáctanos</h3>
+                <img src="~/images/whatsapp (2).png">
+                <img src="~/images/linkedin (3).png">
             </div>
-            <div class="col">
-                <div class="divContactUs">
-                    <h3>Contáctanos</h3>
-                    <img src="../images/icons/whatsapp48px.png">
-                    <img src="../images/icons/linkedin48px.png">
-                </div>
-            </div>
-        </footer>
-        <footer class="footer text-muted" style="position:relative;">
-                <div class="container" style="text-align:center;">
-                    &copy; Copyright Delta Express - 2019
-                </div>
-            </footer>
-    </div>
+        </div>
+    </footer>
+    <footer class="footer text-muted" style="position:relative;">
+        <div class="container" style="text-align:center;">
+            &copy; Copyright Delta Express - 2019
+        </div>
+    </footer>
     <script src="~/js/contact.js"></script>
     <!-- FIN SECCIÓN -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -367,5 +394,6 @@
     <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
     <script src="~/js/contact.js"></script>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 </body>
 </html>
