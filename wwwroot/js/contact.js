@@ -4,8 +4,11 @@
 jQuery(document).ready(function ($) {
 
     // desahbilitar los cuadros de seleccion al ingresar
-    $("select[name=loadingSource]").prop("disabled", true);
-    $("select[name=loadingDestination]").prop("disabled", true);
+    /*$("select[name=loadingSource]").prop("disabled", true);
+    $("select[name=loadingDestination]").prop("disabled", true);*/
+
+    initFormCustomer();
+    initFormCarrier();
 
     // modificar estas funciones Jquery
     $('select[name=serviceType]').on('change', function () {
@@ -15,8 +18,9 @@ jQuery(document).ready(function ($) {
             changeStateSelectorByName("loadingSource");
             changeStateSelectorByName("loadingDestination");
 
-            changeStateLabelForSelectorById("lblOrigen");
-            changeStateLabelForSelectorById("lblDestino");
+            changeStateLabelForSelectorById("#lblOrigen");
+            changeStateLabelForSelectorById("#lblDestino");
+
             /*$("select[name=loadingSource]")
                 .css("background-color", "#ffff")
                 .css("color", "#000000")
@@ -30,7 +34,6 @@ jQuery(document).ready(function ($) {
             $("#lblDestino").css("color", "#000000")*/
 
         } else { // Almacenamiento de Carga
-
             changeStateSelectorByName("loadingSource",false);
             changeStateSelectorByName("loadingDestination",false);
 
@@ -53,6 +56,19 @@ jQuery(document).ready(function ($) {
 
 });
 
+
+function initFormCarrier() {
+
+    changeStateSelectorByName("loadingSource", false);
+    changeStateSelectorByName("loadingDestination", false);
+
+}
+
+function initFormCustomer() {
+
+}
+
+
 function changeStateLabelForSelectorById(id, enable = true) {
     var colorBack = enable ? "#000000" : "#e6e6e5";
     $(id).css("color", colorBack);    
@@ -60,16 +76,16 @@ function changeStateLabelForSelectorById(id, enable = true) {
    
 
 function changeStateSelectorByName(name, enable = true) {
-    if (enable) { /// habilitar
-        $("select[nane=" + name + "]")
+    if (enable) { // habilitar 
+        $("select[name=" + name + "]")
             .css("background-color", "#FFFF")
             .css("color", "#000000")
             .removeAttr("disabled");
     } else { // deshabilitar
-        $("select[nane=" + name + "]")
-            .css("background-color", "#FFFF")
-            .css("color", "#000000")
-            .removeAttr("disabled");
+        $("select[name=" + name + "]")
+            .css("background-color", "#e6e6e5")
+            .css("color", "#e6e6e5")
+            .attr("disabled",true);
     }
     
 }
