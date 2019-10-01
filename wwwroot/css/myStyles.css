@@ -6,43 +6,34 @@ body {
     background-color: white;
 }
 
-.logo {
-    width: 200px;
-}
-
 .myNavbar {
     background-color: white;
     width: 100%;
     margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 0;
 }
 
-.myColorNavbar {
-    background-color: white !important;
+.navbar {
+    display: block;
 }
 
-.elements {
-    float: right !important;
-    display: flex;
+.logo {
+    width: 200px;
+    float: left;
 }
 
-.elementDiv {
+.myNavbarElements {
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 0.2%;
+}
+
+.buttonDiv {
     width: 100px;
     margin: auto 10px auto 10px;
     padding: 0;
     float: right;
-}
-
-.element {
-    width: auto;
-    margin: 0;
-}
-
-.btnLogIn {
-    width: 115%;
-    background-color: lightgray;
 }
 
 .btnDelta {
@@ -52,30 +43,10 @@ body {
     height: 20%;
 }
 
-@keyframes parpadeo {
-    from,
-    to {
-        border-color: transparent
-    }
-    50% {
-        border-color: #ffffff
-    }
-}
-
-@keyframes escribiendo {
-    from {
-        width: 100%
-    }
-    to {
-        width: 0;
-    }
-}
-
 .slider-1 {
     background: url('../images/contratos-transporte-terrestre-andersen-blog.jpg');
     max-width: 100%;
     max-height: 100%;
-    /*background-color: white;*/
 }
 
 .slider-2 {
@@ -83,8 +54,7 @@ body {
 }
 
 .divContainer {
-    /*padding: 0 0 0 0;*/
-    padding:0;
+    padding: 0;
     display: flex;
 }
 
@@ -160,7 +130,6 @@ body {
     width: 55%;
     margin: 0;
     margin-top: 8%;
-    
 }
 
 #sec-2 .divOptions * {
@@ -174,7 +143,7 @@ body {
     width: 100%;
     list-style: none;
     display: flex;
-    height:auto;
+    height: auto;
     border: solid white;
     border-right: none;
 }
@@ -185,8 +154,6 @@ body {
     border-right: solid white;
     padding: 1px;
 }
-
-
 
 #sec-2 .divOptions .tabs li a {
     margin: 0;
@@ -230,7 +197,7 @@ body {
     margin: 10% 0% 0% 1%;
     text-align: center;
     padding: 0% 10%;
-    font-size:large;
+    font-size: large;
 }
 
 .active {
@@ -254,17 +221,18 @@ body {
     padding: 2% 0% 2% 0%;
     position: relative;
 }
+
 .container2 {
     margin: 10px !important;
     /* margin-bottom: 50px !important; */
     box-shadow: 1px 1px 20px lightgray !important;
-    border:solid black 1px;
+    border: solid black 1px;
 }
 
 .footer2 {
     width: 100%;
-    margin:0;
-    margin-top:0.5%;
+    margin: 0;
+    margin-top: 0.5%;
     box-shadow: 0px 0px 10px lightgray !important;
 }
 
@@ -297,68 +265,49 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-    div {
+    body {
         width: 80%;
     }
-    .myNavbar {
-        margin: 0;
-        padding: 0;
-        width: 90%;
-        display: block;
-        position: fixed;
-    }
     .logo {
-        margin: 0;
-        padding: 0;
         width: 100%;
+        float: center;
     }
-    .elements {
-        margin: 0;
-        margin-top: 5%;
-        padding: 0;
+    .myNavbarElements{
         width: 100%;
-        justify-content: center;
-    }
-    .elements .elementDiv {
         margin: 0;
         padding: 0;
-        padding-left: 4%;
-        padding-right: 4%;
-        width: auto;
     }
-    .elements .elementDiv .element {
-        margin: 0;
+    .myNavbarElements .navbar-nav{
+        display: inline;
+    }
+    .myNavbarElements .navbar-nav .nav-item {
+        box-sizing: 25% !important;
+        display:inline !important;
         padding: 0;
-        font-size: 75%;
+        margin: 0 1.5%;
+    }
+    .myNavbarElements .navbar-nav .nav-item .nav-link{
+        width: 5% !important;
+    }
+    .buttonDiv {
+        width: 100px;
+        margin: auto 10px auto 10px;
+        padding: 0;
+        float: right;
+    }
+    .btnDelta {
+        background: #ec9404;
+        border-color: #ec9404;
+        color: white;
+        height: 20%;
     }
     .slider-1 {
         width: 100%;
         margin: 0;
         padding: 0;
     }
-    .navbar-fixed-top {
-        margin: 0;
-        padding: 0;
-    }
-    .btnLogIn {
-        padding-left: 0;
-        padding-right: 0;
-        margin: 0;
-        width: 115%;
-        background-color: lightgray;
-    }
-    .divContainer {
-        width: 100%;
-        margin: 0;
-        padding: 60% 0 0 0;
-        display: flex;
-        object-fit:fill;
-    }
-    .myCarousel {
-        width: 100%;
-    }
-    .myCarouselElement {
-        width: 100%;
+    #sec-1 {
+        border: none;
     }
     #sec-1 .text {
         margin: 0;
@@ -402,15 +351,13 @@ body {
     padding: 4px;
 }
 
-
-
 .custom_li {
     float: left;
     position: relative;
     display: flex;
     width: 25%;
     margin: 2px;
-    word-break:break-word;
+    word-break: break-word;
 }
 
 .typer {
@@ -429,4 +376,3 @@ body {
 .footer1 {
     background-color: white;
 }
-
