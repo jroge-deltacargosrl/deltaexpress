@@ -73,6 +73,8 @@ body {
 
 .slider-1 {
     background: url('../images/contratos-transporte-terrestre-andersen-blog.jpg');
+    max-width: 100%;
+    max-height: 100%;
     /*background-color: white;*/
 }
 
@@ -81,7 +83,8 @@ body {
 }
 
 .divContainer {
-    padding: 3.5% 0 0 0;
+    /*padding: 0 0 0 0;*/
+    padding:0;
     display: flex;
 }
 
@@ -150,13 +153,14 @@ body {
     width: 35%;
     height: 5%;
     float: left;
-    margin: 8% 8% 0% 8%;
+    margin: 0% 5% 0% 8%;
 }
 
 #sec-2 .divOptions {
     width: 55%;
     margin: 0;
     margin-top: 8%;
+    
 }
 
 #sec-2 .divOptions * {
@@ -182,17 +186,7 @@ body {
     padding: 1px;
 }
 
-<<<<<<< HEAD
 
-
-=======
-.imgForms {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    padding: 4px;
-}
->>>>>>> f3cc9e9e366529a6160dd8840dd3beb4ddb47b78
 
 #sec-2 .divOptions .tabs li a {
     margin: 0;
@@ -200,7 +194,7 @@ body {
     width: 100%;
     background-color: lightgray;
     text-decoration: none;
-    border-radius: 10px !important;
+    border-radius: 7px !important;
 }
 
 .colTxt {
@@ -229,11 +223,14 @@ body {
 
 #sec-2 .divOptions .tabContents {
     width: 100%;
+    padding: 0% 5% 0% 0%;
 }
 
 #sec-2 .divOptions .tabContents p {
     margin: 10% 0% 0% 1%;
-    text-align: justify;
+    text-align: center;
+    padding: 0% 10%;
+    font-size:large;
 }
 
 .active {
@@ -272,7 +269,7 @@ body {
 }
 
 .logoFooter {
-    width: 15%;
+    width: 12%;
     float: left;
     margin: 0;
     margin-top: 0.5%;
@@ -355,6 +352,7 @@ body {
         margin: 0;
         padding: 60% 0 0 0;
         display: flex;
+        object-fit:fill;
     }
     .myCarousel {
         width: 100%;
@@ -397,13 +395,14 @@ body {
     }
 }
 
-<<<<<<< HEAD
 .imgForms {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
     padding: 4px;
 }
+
+
 
 .custom_li {
     float: left;
@@ -414,7 +413,6 @@ body {
     word-break:break-word;
 }
 
-=======
 .typer {
     color: white !important;
     background-color: #ec9404;
@@ -431,4 +429,4 @@ body {
 .footer1 {
     background-color: white;
 }
->>>>>>> f3cc9e9e366529a6160dd8840dd3beb4ddb47b78
+

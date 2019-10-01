@@ -5,12 +5,19 @@ jQuery(document).ready(function ($) {
 
     // desahbilitar los cuadros de seleccion al ingresar
     $("select[name=loadingSource]").prop("disabled", true);
-    $("select[name=loadingSource]").prop("disabled", true);
+    $("select[name=loadingDestination]").prop("disabled", true);
 
+    // modificar estas funciones Jquery
     $('select[name=serviceType]').on('change', function () {
         var service = $('select[name=serviceType] option:selected').val();
+        // ampliar las posibilidades (funciones modulare)
         if (service == 1) { // Transporte Nacional
-            $("select[name=loadingSource]")
+            changeStateSelectorByName("loadingSource");
+            changeStateSelectorByName("loadingDestination");
+
+            changeStateLabelForSelectorById("lblOrigen");
+            changeStateLabelForSelectorById("lblDestino");
+            /*$("select[name=loadingSource]")
                 .css("background-color", "#ffff")
                 .css("color", "#000000")
                 .removeAttr("disabled");
@@ -20,10 +27,17 @@ jQuery(document).ready(function ($) {
                 .removeAttr("disabled");
 
             $("#lblOrigen").css("color", "#000000")
-            $("#lblDestino").css("color", "#000000")
+            $("#lblDestino").css("color", "#000000")*/
 
-        } else { // Almacenamiento de Cargas
-            $("select[name=loadingSource]")
+        } else { // Almacenamiento de Carga
+
+            changeStateSelectorByName("loadingSource",false);
+            changeStateSelectorByName("loadingDestination",false);
+
+            changeStateLabelForSelectorById("#lblOrigen",false);
+            changeStateLabelForSelectorById("#lblDestino",false);
+
+            /*$("select[name=loadingSource]")
                 .css("background-color", "#e6e6e5")
                 .css("color", "#e6e6e5")
                 .attr("disabled", true);
@@ -33,11 +47,32 @@ jQuery(document).ready(function ($) {
                 .attr("disabled", true);
 
             $("#lblOrigen").css("color", "#e6e6e5")
-            $("#lblDestino").css("color", "#e6e6e5")
+            $("#lblDestino").css("color", "#e6e6e5")*/
         }
     });
 
 });
+
+function changeStateLabelForSelectorById(id, enable = true) {
+    var colorBack = enable ? "#000000" : "#e6e6e5";
+    $(id).css("color", colorBack);    
+}
+   
+
+function changeStateSelectorByName(name, enable = true) {
+    if (enable) { /// habilitar
+        $("select[nane=" + name + "]")
+            .css("background-color", "#FFFF")
+            .css("color", "#000000")
+            .removeAttr("disabled");
+    } else { // deshabilitar
+        $("select[nane=" + name + "]")
+            .css("background-color", "#FFFF")
+            .css("color", "#000000")
+            .removeAttr("disabled");
+    }
+    
+}
 
 function responseCotization() {
 

@@ -7,18 +7,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home | Delta Express</title>
+    <title>Delta X</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/css/bootstrap-flex.css">
     <link rel="stylesheet" href="~/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="shortcut icon" href="~/images/deltax-logo.ico" />
+    <link rel="shortcut icon" href="~/images/XDeltaX.ico" />
     <environment include="Development">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-            crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+              crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="shortcut icon" href="~/images/deltax-02.ico" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -37,7 +37,7 @@
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callback: function(anchor, toggle) {} // Function to run after scrolling
+            callback: function (anchor, toggle) { } // Function to run after scrolling
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
@@ -93,18 +93,8 @@
     <div class="slider-1" id="sec-1">
         <div class="divContainer">
             <div class="text">
-<<<<<<< HEAD
-                @*<h1>Revolucionamos el</h1>
-                    <div>
-                        <h1 id="dinamicText"></h1>
-                        <h1>de carga en</h1>
-                    </div>
-                    <h1>Bolivia</h1>
-                *@
-=======
->>>>>>> f3cc9e9e366529a6160dd8840dd3beb4ddb47b78
                 <h1>
-                    Revolucionamos el <br/>
+                    Revolucionamos el <br />
                 </h1>
                 <h1>
                     <span class="typer" id="main" data-words="Transporte,Almacenamiento" data-delay="100" data-deleteDelay="1000">
@@ -125,6 +115,53 @@
     <!-- SECCIÓN 2 : Tecnología-->
     <div class="slider-2" id="sec-2">
         <div class="divContainer">
+            @*<div class="row">
+                    <div class="col-md-6">
+                        <img id="tab1img" src="~/images/img_geolocalizacion.png" class="img" />
+                        <img id="tab2img" src="~/images/img_timeline.png" class="img" />
+                        <img id="tab3img" src="~/images/img_cotizaciones.png" class="img" />
+                    </div>
+                    <div class="col-md-6">
+                        <div class="divOptions">
+                            <ul class="tabs">
+                                <li class="custom_li" id="li1"><a href="#tab1"><span><b>Geolocalización</b></span></a></li>
+                                <li class="custom_li" id="li2"><a href="#tab2"><span><b>Seguimiento</b></span></a></li>
+                                <li class="custom_li" id="li3"><a href="#tab3"><span><b>Cotizaciones</b></span></a></li>
+                            </ul>
+                            <div class="tabContents">
+                                <article id="tab1">
+                                    <p>
+                                        Ahora podras conocer la ubicacion exacta del camion que lleva
+                                        tu carga, en todo momento. Ingresando a nuestro portal
+                                        Cliente, podras conocer la ubicacion exacta de cada una de las
+                                        Operaciones en transite contratadas, asi como tambien el
+                                        historial de operaciones pasadas.
+                                    </p>
+                                </article>
+                                <article id="tab2">
+                                    <p>
+                                        Ahora podras saber todos los pasos a seguir para el transporte
+                                        de tu carga, podras ver todas y cada una de las etapas en las
+                                        que se encuentra cada operacion, asi como también cargar y/o
+                                        consultar documentos segun la etapa.
+                                    </p>
+                                </article>
+                                <article id="tab3">
+                                    <p>
+                                        Ahora podras solicitar una cotizacion de manera sencilla,
+                                        practica y rapida. Podras solicitar cotizaciones por cada uno de
+                                        los servicios que ofertamos, con un tiempo de respuesta
+                                        inmediato dentro de las 24 horas de realizada la solicitud,
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>*@
+
+
             <img id="tab1img" src="~/images/img_geolocalizacion.png" class="img" />
             <img id="tab2img" src="~/images/img_timeline.png" class="img" />
             <img id="tab3img" src="~/images/img_cotizaciones.png" class="img" />
@@ -166,21 +203,6 @@
             </div>
                 -->
             <div class="divOptions">
-                @*<div class="container">
-                    <div id="tabsTechnology" class="row">
-                        <div id="li1" style="word-break:break-word;" class="col-4">
-                            <a href="#tab1"><span><b>Geolocalización</b></span></a>
-                            dadsassssssssssssssssss
-                        </div>
-                        <div id="li2" style="word-break:break-word;" class="col-4">
-                            <a href="#tab2"><span><b>Seguimiento</b></span></a>
-                        </div>
-                        <div id="li3" style="word-break:break-word;" class="col-4">
-                            <a href="#tab3"><span><b>Cotizaciones</b></span></a>
-                        </div>
-                    </div>
-                </div>*@
-
                 <ul class="tabs">
                     <li class="custom_li" id="li1"><a href="#tab1"><span><b>Geolocalización</b></span></a></li>
                     <li class="custom_li" id="li2"><a href="#tab2"><span><b>Seguimiento</b></span></a></li>
@@ -189,27 +211,25 @@
                 <div class="tabContents">
                     <article id="tab1">
                         <p>
-                            Ahora podras conocer la ubicacion exacta del camion que lleva
-                            tu carga, en todo momento. Ingresando a nuestro portal
-                            Cliente, podras conocer la ubicacion exacta de cada una de las
-                            Operaciones en transite contratadas, asi como tambien el
-                            historial de operaciones pasadas.
+                            Ahora podrás conocer la ubicación exacta del camión que lleva tu carga, 
+                            en todo momento. Ingresando a nuestro portal Cliente, podrás conocer la 
+                            ubicación exacta de cada una de las Operaciones en tránsito contratadas, 
+                            así como también el historial de operaciones pasadas.
                         </p>
                     </article>
                     <article id="tab2">
                         <p>
-                            Ahora podras saber todos los pasos a seguir para el transporte
-                            de tu carga, podras ver todas y cada una de las etapas en las
-                            que se encuentra cada operacion, asi como también cargar y/o
-                            consultar documentos segun la etapa.
+                            Ahora podrás saber todos los pasos a seguir para el transporte de tu carga,
+                            podrás ver todas y cada una de las etapas en las que se encuentra cada operación,
+                            así como también cargar y/o consultar documentos según la etapa.
                         </p>
                     </article>
                     <article id="tab3">
                         <p>
-                            Ahora podras solicitar una cotizacion de manera sencilla,
-                            practica y rapida. Podras solicitar cotizaciones por cada uno de
-                            los servicios que ofertamos, con un tiempo de respuesta
-                            inmediato dentro de las 24 horas de realizada la solicitud,
+                            Ahora podrás solicitar una cotización de manera sencilla,
+                            practica y rápida. Podrás solicitar cotizaciones por cada uno 
+                            de los servicios que ofertamos, con un tiempo de respuesta inmediato 
+                            dentro de las 24 horas de realizada la solicitud.
                         </p>
                     </article>
                 </div>
@@ -221,15 +241,15 @@
     <div class="slider-2 divContainerForm" id="sec-4">
         <div class="divContainer">
             <div class="col colTxt">
-                <h1>Revolucionamos el transporte de carga en Bolivia</h1>
+                <h1>Transporta carga con nosotros</h1>
                 @*
-                <p><b>Cotiza nuestros servicios ahora!</b></p>*@
-                <p>Cotiza nuestros servicios ahora!</p>
+                    <p><b>Cotiza nuestros servicios ahora!</b></p>*@
+                <p>Regístrate ahora!</p>
                 <div>
                     <img class="imgForms" src="~/images/form_transportista.jpg" alt="Imagen no cargada" />
                 </div>
                 @*
-                <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
+                    <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
 
 
             </div>
@@ -239,11 +259,22 @@
                     <input type="hidden" name="zc_gad" value="">
                     <div class="form-row">
                         <label for="company">Empresa</label>
-                        <input class="form-control" type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                        <input class="form-control" type="text" name="company" placeholder="Ej. Delta X">
                     </div>
                     <div class="form-row">
-                        <label for="fullname">Nombre Completo *</label>
-                        <input class="form-control" required type="text" name="fullname" placeholder="Ej. Juan Perez">
+
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <label for="fullname">Nombres*</label>
+                            <input class="form-control" required type="text" name="fullname" placeholder="Ej. Juan Martin">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="fullname">Apellidos*</label>
+                            <input class="form-control" required type="text" name="lastname" placeholder="Ej. Perez Fernandez">
+                        </div>
+
                     </div>
                     <div class="form-row">
                         <label for="phone">Teléfono *</label>
@@ -254,7 +285,6 @@
                         <input class="form-control" type="text" name="email" placeholder="Ej. example@gmail.com">
                     </div>
                     <div class="form-row">
-
                         <label for="serviceType">Tipo de Servicio *</label>
                         <select class="form-control" required name="serviceType">
                             <option value="">Seleccionar</option>
@@ -265,7 +295,7 @@
                     <div class="grid form-row row-of-combos">
                         <div class="col">
                             <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
-                            <select class="form-control" required name="loadingSource" id="">
+                            <select class="form-control" required name="loadingSource">
                                 <option value="">Seleccionar</option>
                                 <option value="SantaCruz">Santa Cruz</option>
                                 <option value="LaPaz">La Paz</option>
@@ -280,7 +310,7 @@
                         </div>
                         <div class="col">
                             <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
-                            <select  class="form-control" name="loadingDestination" id="">
+                            <select class="form-control" name="loadingDestination">
                                 <option value="">Seleccionar</option>
                                 <option value="SantaCruz">Santa Cruz</option>
                                 <option value="LaPaz">La Paz</option>
@@ -316,7 +346,7 @@
                     <input type="hidden" name="zc_gad" value="">
                     <div class="form-row">
                         <label for="company">Empresa</label>
-                        <input class="form-control" type="text" name="company" placeholder="Ej. Delta Cargo SRL">
+                        <input class="form-control" type="text" name="company" placeholder="Ej. Delta X">
                     </div>
                     <div class="form-row">
                         <label for="fullname">Nombre Completo *</label>
@@ -348,44 +378,44 @@
                                 <option value="SantaCruz">Santa Cruz</option>
                                 <option value="LaPaz">La Paz</option>
                                 <option value="Cochabamba">Cochabamba</option>
-                                <option value="Chuquisaca">Chuquisaca</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="ElAlto">El Alto</option>
+                                <option value="Potosi">Potosi</option>
                                 <option value="Oruro">Oruro</option>
                                 <option value="Tarija">Tarija</option>
-                                <option value="Beni">Beni</option>
-                                <option value="Potosi">Potosi</option>
-                                <option value="Pando">Pando</option>
+                                <option value="Trinidad">Trinidad</option>
                             </select>
                         </div>
                         <div class="col">
                             <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
-                            <select class="form-control-range" name="loadingDestination" id="">
+                            <select class="form-control" name="loadingDestination" id="">
                                 <option value="">Seleccionar</option>
                                 <option value="SantaCruz">Santa Cruz</option>
                                 <option value="LaPaz">La Paz</option>
                                 <option value="Cochabamba">Cochabamba</option>
-                                <option value="Chuquisaca">Chuquisaca</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="ElAlto">El Alto</option>
+                                <option value="Potosi">Potosi</option>
                                 <option value="Oruro">Oruro</option>
                                 <option value="Tarija">Tarija</option>
-                                <option value="Beni">Beni</option>
-                                <option value="Potosi">Potosi</option>
-                                <option value="Pando">Pando</option>
+                                <option value="Trinidad">Trinidad</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <button type="submit" onclick="return responseCotization();" class="form-control btn btn-block btnDelta">
                             <a style="color:white;text-decoration:none;">
-                                Cotizar
+                                Regístrate
                             </a>
                         </button> @*
-                        <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
+                            <button type="button" class="button" onclick="validateCotization()">Cotizar</a>*@
                     </div>
                     <span class="err-msg">Debe completar los campos: Nombre / Empresa, Teléfono y Email</span>
                 </form>
             </div>
             <div class="col colTxt">
-                <h2>Revolucionamos el transporte de carga en Bolivia</h2>
-                <p>Regístrate ahora!</p>
+                <h2>Transporta carga con nosotros</h2>
+                <p>Cotiza nuestros servicios ahora!</p>
                 @*<p>¿Quiéres transportar carga con nosotros?</p>
                     <p><b>Regístrate ahora!</b></p>*@
                 <div>
@@ -410,18 +440,18 @@
         </div>
     </footer> -->
     <footer class="footer text-muted footer1 footer2" style="position:relative;">
-                <img src="..\images\logoDeltaX.png" class="logoFooter">
-                <div class="col">
-                    <div class="divContactUs">
-                        <h3>Contáctanos</h3>
-                        <img src="~/images/whatsapp (2).png">
-                        <img src="~/images/linkedin (3).png">
-                    </div>
+        <img src="..\images\logoDeltaX.png" class="logoFooter">
+        <div class="col">
+            <div class="divContactUs">
+                <h3>Contáctanos</h3>
+                <img src="~/images/whatsapp (2).png">
+                <img src="~/images/linkedin (3).png">
             </div>
-        </footer>
+        </div>
+    </footer>
     <footer class="footer text-muted footer1" style="position:relative;">
         <div class="container" style="text-align:center;background-color: white;">
-            &copy; Copyright Delta Express - 2019
+            &copy; Copyright Delta X - 2019
         </div>
     </footer>
     <script src="~/js/contact.js"></script>
