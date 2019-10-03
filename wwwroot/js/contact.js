@@ -10,17 +10,38 @@ jQuery(document).ready(function ($) {
     initFormCustomer();
     initFormCarrier();
 
-    // modificar estas funciones Jquery
+    // Selector de los tipos de servicio del formulario de clien
     $('select[name=serviceType]').on('change', function () {
         var service = $('select[name=serviceType] option:selected').val();
         // ampliar las posibilidades (funciones modulare)
+        switch (parseInt(service)) {
+            case 1:
+                showContainerTransporteNacional();
+                /*changeStateSelectorByName("loadingSource");
+                changeStateSelectorByName("loadingDestination");
+
+                changeStateLabelForSelectorById("#lblOrigen");
+                changeStateLabelForSelectorById("#lblDestino");*/
+
+                break;
+            case 2:
+                showContainerTransporteUrbanoSCZ();
+                /*changeStateSelectorByName("loadingSource",false);
+                changeStateSelectorByName("loadingDestination",false);
+
+                changeStateLabelForSelectorById("#lblOrigen",false);
+                changeStateLabelForSelectorById("#lblDestino",false);*/
+                break;
+            case 3:
+                showContainerAlmacenamientoCarga();
+                break;
+            default:
+                break;
+        }
+
+
         if (service == 1) { // Transporte Nacional
-            changeStateSelectorByName("loadingSource");
-            changeStateSelectorByName("loadingDestination");
-
-            changeStateLabelForSelectorById("#lblOrigen");
-            changeStateLabelForSelectorById("#lblDestino");
-
+            
             /*$("select[name=loadingSource]")
                 .css("background-color", "#ffff")
                 .css("color", "#000000")
@@ -34,11 +55,7 @@ jQuery(document).ready(function ($) {
             $("#lblDestino").css("color", "#000000")*/
 
         } else { // Almacenamiento de Carga
-            changeStateSelectorByName("loadingSource",false);
-            changeStateSelectorByName("loadingDestination",false);
-
-            changeStateLabelForSelectorById("#lblOrigen",false);
-            changeStateLabelForSelectorById("#lblDestino",false);
+           
 
             /*$("select[name=loadingSource]")
                 .css("background-color", "#e6e6e5")
@@ -57,10 +74,29 @@ jQuery(document).ready(function ($) {
 });
 
 
+function showContainerTransporteNacional() {
+    $("#divPesoVolumen").hide();
+    $("#divAlmacenamientoCarga").hide();
+    $("#divTransporteNacional").show();
+}
+
+
+function showContainerTransporteUrbanoSCZ() {
+    $("#divTransporteNacional").hide();
+    $("#divAlmacenamientoCarga").hide();
+    $("#divPesoVolumen").show();
+}
+
+function showContainerAlmacenamientoCarga() {
+    $("#divTransporteNacional").hide();
+    $("#divPesoVolumen").hide();
+    $("#divAlmacenamientoCarga").show();
+}
+
 function initFormCarrier() {
 
-    changeStateSelectorByName("loadingSource", false);
-    changeStateSelectorByName("loadingDestination", false);
+    /*changeStateSelectorByName("loadingSource", false);
+    changeStateSelectorByName("loadingDestination", false);*/
 
 }
 
