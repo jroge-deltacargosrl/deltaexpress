@@ -18,7 +18,7 @@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+            crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="shortcut icon" href="~/images/deltax-02.ico" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -37,7 +37,7 @@
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callback: function (anchor, toggle) { } // Function to run after scrolling
+            callback: function(anchor, toggle) {} // Function to run after scrolling
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
@@ -47,27 +47,34 @@
 
 <body>
     <!-- MENÚ -->
-    <div class="container-fluid navbar-fixed-top myNavbar">
-        <nav class="navbar navbar-expand-lg nav-tabs">
-            <img src="~/images/logoDeltaX.png" class="logo" />
-            <div class="navbar-collapse myNavbarElements">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a data-scroll class="nav-link" href="#sec-1">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-scroll class="nav-link" href="#sec-2">Tecnología</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-scroll href="#sec-5" class="nav-link" role="button" aria-pressed="true">Contacto</a>
-                    </li>
-                    <li class="nav-item buttonDiv">
-                        <button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>
-                    </li>
-                </ul>
+    <header>
+        <nav class="myNavbar navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logoDeltaX.png" class="logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse myNavbarElements">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" data-scroll href="#sec-1">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" data-scroll href="#sec-2">Tecnología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" data-scroll href="#sec-5">Contacto</a>
+                        </li>
+                        <li class="nav-item buttonDiv">
+                            <button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-    </div>
+    </header>
     <!-- FIN MENU -->
     <!-- SECCIÓN 1 : Inicio-->
     <div class="slider-1" id="sec-1">
@@ -107,10 +114,8 @@
                 <div class="tabContents">
                     <article id="tab1">
                         <p>
-                            Ahora podrás conocer la ubicación exacta del camión que lleva tu carga,
-                            en todo momento. Ingresando a nuestro portal Cliente, podrás conocer la
-                            ubicación exacta de cada una de las Operaciones en tránsito contratadas,
-                            así como también el historial de operaciones pasadas.
+                            Ahora podrás conocer la ubicación exacta del camión que lleva tu carga, en todo momento. Ingresando a nuestro portal Cliente, podrás conocer la ubicación exacta de cada una de las Operaciones en tránsito contratadas, así como también el historial de operaciones
+                            pasadas.
                         </p>
                     </article>
                     <article id="tab2">
@@ -120,10 +125,7 @@
                     </article>
                     <article id="tab3">
                         <p>
-                            Ahora podrás solicitar una cotización de manera sencilla,
-                            practica y rápida. Podrás solicitar cotizaciones por cada uno
-                            de los servicios que ofertamos, con un tiempo de respuesta inmediato
-                            dentro de las 24 horas de realizada la solicitud.
+                            Ahora podrás solicitar una cotización de manera sencilla, practica y rápida. Podrás solicitar cotizaciones por cada uno de los servicios que ofertamos, con un tiempo de respuesta inmediato dentro de las 24 horas de realizada la solicitud.
 
                         </p>
                     </article>
@@ -138,13 +140,13 @@
             <div class="col colTxt">
                 <h1>Transporta carga con nosotros</h1>
                 @*
-                    <p><b>Cotiza nuestros servicios ahora!</b></p>*@
+                <p><b>Cotiza nuestros servicios ahora!</b></p>*@
                 <p>Regístrate ahora!</p>
                 <div>
                     <img class="imgForms" src="~/images/form_transportista.jpg" alt="Imagen no cargada" />
                 </div>
                 @*
-                    <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
+                <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
 
 
             </div>
@@ -201,7 +203,7 @@
     </div>
     <!-- FIN SECCIÓN -->
     <!-- SECCIÓN 5 : Soy cliente-->
-    <div class="slider-2 divContainerForm" id="sec-5">
+    <div class="slider-2 divContainerForm2" id="sec-5">
         <div class="divContainer">
             <div class="col colForm">
                 <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
@@ -368,17 +370,10 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
         </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous"
+            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -388,4 +383,5 @@
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
 </body>
+
 </html>

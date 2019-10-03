@@ -1,20 +1,20 @@
 body {
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: white;
 }
 
 .myNavbar {
-    background-color: white;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
 }
 
-.navbar {
-    display: block;
+.container {
+    display: block !important;
+}
+
+.myNavbar {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .logo {
@@ -23,10 +23,8 @@ body {
 }
 
 .myNavbarElements {
-    margin: 0;
-    padding: 0;
+    margin-top: 1%;
     float: right;
-    margin-top: 0.2%;
 }
 
 .buttonDiv {
@@ -43,6 +41,12 @@ body {
     height: 20%;
 }
 
+.divContainer {
+    padding: 0;
+    padding-top: 5%;
+    display: flex;
+}
+
 .slider-1 {
     background: url('../images/contratos-transporte-terrestre-andersen-blog.jpg');
     max-width: 100%;
@@ -51,11 +55,6 @@ body {
 
 .slider-2 {
     background-color: white;
-}
-
-.divContainer {
-    padding: 0;
-    display: flex;
 }
 
 #sec-1 .text {
@@ -175,6 +174,10 @@ body {
     height: 800px;
 }
 
+.divContainerForm2 {
+    height: 900px;
+}
+
 .colForm {
     text-align: left;
     margin: 0;
@@ -265,35 +268,18 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-    body {
-        width: 80%;
-    }
-    .logo {
+    header{
         width: 100%;
-        float: center;
     }
-    .myNavbarElements{
-        width: 100%;
-        margin: 0;
-        padding: 0;
+    .container {
+        display: inline !important;
     }
-    .myNavbarElements .navbar-nav{
-        display: inline;
-    }
-    .myNavbarElements .navbar-nav .nav-item {
-        box-sizing: 25% !important;
-        display:inline !important;
-        padding: 0;
-        margin: 0 1.5%;
-    }
-    .myNavbarElements .navbar-nav .nav-item .nav-link{
-        width: 5% !important;
+    .container {
+        display: flex !important;
     }
     .buttonDiv {
-        width: 100px;
-        margin: auto 10px auto 10px;
+        margin: 1% 1% 0% 3% !important;
         padding: 0;
-        float: right;
     }
     .btnDelta {
         background: #ec9404;
@@ -302,9 +288,13 @@ body {
         height: 20%;
     }
     .slider-1 {
-        width: 100%;
+        width: 120%;
         margin: 0;
         padding: 0;
+    }
+    .divContainer {
+        display: block;
+        padding-top: 40%;
     }
     #sec-1 {
         border: none;
@@ -321,7 +311,7 @@ body {
     #sec-1 .text h1 {
         margin: 0 0 0 10%;
         font-size: 150%;
-        width: 100%;
+        width: 90%;
     }
     #sec-1 .text .h12 {
         padding: 0;
@@ -341,6 +331,16 @@ body {
     #sec-1 .text .btnSoyCliente {
         margin-right: 1%;
         margin-left: 10%;
+    }
+    #sec-4 .divContainer .colTxt{
+        width: 90%;
+        margin-right:0;
+        padding-right: 0;
+    }
+    #sec-5 .divContainer .colTxt{
+        width: 90%;
+        margin-right:0;
+        padding-right: 0;
     }
 }
 
