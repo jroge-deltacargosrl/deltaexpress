@@ -268,23 +268,26 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-    header{
+    header {
         width: 100%;
-    }
-    .container {
-        display: inline !important;
     }
     .container {
         display: flex !important;
     }
+    .nav-link {
+        text-align: center;
+    }
     .buttonDiv {
-        margin: 1% 1% 0% 3% !important;
-        padding: 0;
+        align-content: center;
+        text-align: center;
+        display: block;
+        margin: auto !important;
+        width: 100% !important;
+    }
+    .buttonDiv .buttonDiv {
+        width: 100% !important;
     }
     .btnDelta {
-        background: #ec9404;
-        border-color: #ec9404;
-        color: white;
         height: 20%;
     }
     .slider-1 {
@@ -292,7 +295,7 @@ body {
         margin: 0;
         padding: 0;
     }
-    .divContainer {
+    #sec-1 .divContainer {
         display: block;
         padding-top: 40%;
     }
@@ -332,15 +335,25 @@ body {
         margin-right: 1%;
         margin-left: 10%;
     }
-    #sec-4 .divContainer .colTxt{
-        width: 90%;
-        margin-right:0;
-        padding-right: 0;
+    /*ACOMODAR LA SECCION 2*/
+    #sec-2 .divContainer {
+        display: block;
+        padding-top: 30%;
     }
-    #sec-5 .divContainer .colTxt{
+    #sec-2 .img {
         width: 90%;
-        margin-right:0;
-        padding-right: 0;
+    }
+    #sec-2 .divOptions {
+        width: 100%;
+    }
+    #sec-2 .divOptions .tabs {
+        width: 100%;
+        list-style: none;
+        display: block;
+        height: auto;
+    }
+    #sec-2 .divOptions .tabContents article{
+        font-size: 75%;
     }
 }
 
