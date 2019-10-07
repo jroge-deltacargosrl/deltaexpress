@@ -17,60 +17,16 @@ jQuery(document).ready(function ($) {
         switch (parseInt(service)) {
             case 1:
                 showContainerTransporteNacional();
-                /*changeStateSelectorByName("loadingSource");
-                changeStateSelectorByName("loadingDestination");
-
-                changeStateLabelForSelectorById("#lblOrigen");
-                changeStateLabelForSelectorById("#lblDestino");*/
-
                 break;
             case 2:
-                showContainerTransporteUrbanoSCZ();
-                /*changeStateSelectorByName("loadingSource",false);
-                changeStateSelectorByName("loadingDestination",false);
-
-                changeStateLabelForSelectorById("#lblOrigen",false);
-                changeStateLabelForSelectorById("#lblDestino",false);*/
+                showContainerAlmacenamientoCarga();
                 break;
             case 3:
-                showContainerAlmacenamientoCarga();
+                showContainerTransporteUrbanoSCZ();
                 break;
             default:
                 break;
         }
-
-
-        if (service == 1) { // Transporte Nacional
-            
-            /*$("select[name=loadingSource]")
-                .css("background-color", "#ffff")
-                .css("color", "#000000")
-                .removeAttr("disabled");
-            $("select[name=loadingDestination]")
-                .css("background-color", "#ffff")
-                .css("color", "#000000")
-                .removeAttr("disabled");
-
-            $("#lblOrigen").css("color", "#000000")
-            $("#lblDestino").css("color", "#000000")*/
-
-        } else { // Almacenamiento de Carga
-           
-
-            /*$("select[name=loadingSource]")
-                .css("background-color", "#e6e6e5")
-                .css("color", "#e6e6e5")
-                .attr("disabled", true);
-            $("select[name=loadingDestination]")
-                .css("background-color", "#e6e6e5")
-                .css("color","#e6e6e5")
-                .attr("disabled", true);
-
-            $("#lblOrigen").css("color", "#e6e6e5")
-            $("#lblDestino").css("color", "#e6e6e5")*/
-        }
-    });
-
 });
 
 
