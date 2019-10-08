@@ -14,7 +14,9 @@ jQuery(document).ready(function ($) {
     $('select[name=serviceType]').on('change', function () {
         var service = $('select[name=serviceType] option:selected').val();
         // ampliar las posibilidades (funciones modulare)
-        switch (parseInt(service)) {
+        let idService = parseInt(service); 
+        changePlaceholderComment(idService);
+        switch (idService) {
             case 1:
                 showContainerTransporteNacional();
                 break;
@@ -64,21 +66,20 @@ jQuery(document).ready(function ($) {
     // funcion para escribir dinamicamente los cuadros del placeholder
     function changePlaceholderComment(typeService) {
         let commentTxt = "";
-        switch (parseInt(typeService)) {
+        switch (typeService) {
             case 1:
-                commentTxt = "Hola! quiero transportar 10 Pallets, desde mis almacenes en el Parque Industrial hasta la Av. Banzer 9no Anillo, almacenes XYZ";
-            break;
+                commentTxt = "Hola! 1uiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana...";
+                break;
             case 2:
-            
-            break;
-                    case 3:
-            
-            break;
-                    default:
-            break;
-    
+                commentTxt = "Hola! Tengo 10 Pallets de baldes de pintura, con un peso total de 20 Tn..."
+                break;
+            case 3:
+                commentTxt = "Hola! quiero transportar 10 Pallets, desde mis almacenes en el Parque Industrial hasta la Av. Banzer 9no Anillo, almacenes XYZ...";
+                break;
+            default:
+                break;
         }
-        $("#comentanos").attr("placeholder", );
+        $("textarea[name=comentanos]").attr("placeholder",commentTxt).blur();
     }
 
 
