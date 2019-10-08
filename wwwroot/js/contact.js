@@ -61,6 +61,28 @@ jQuery(document).ready(function ($) {
     }
 
 
+    // funcion para escribir dinamicamente los cuadros del placeholder
+    function changePlaceholderComment(typeService) {
+        let commentTxt = "";
+        switch (parseInt(typeService)) {
+            case 1:
+                commentTxt = "Hola! quiero transportar 10 Pallets, desde mis almacenes en el Parque Industrial hasta la Av. Banzer 9no Anillo, almacenes XYZ";
+            break;
+            case 2:
+            
+            break;
+                    case 3:
+            
+            break;
+                    default:
+            break;
+    
+        }
+        $("#comentanos").attr("placeholder", );
+    }
+
+
+
     function changeStateLabelForSelectorById(id, enable = true) {
         var colorBack = enable ? "#000000" : "#e6e6e5";
         $(id).css("color", colorBack);

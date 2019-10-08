@@ -40,4 +40,8 @@ $(document).ready(function () {
         }
         sleep(wordTime);
     }
+
+
+
+
 });
