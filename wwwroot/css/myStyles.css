@@ -29,7 +29,7 @@ body {
 
 .buttonDiv {
     /*width: 100px;*/
-    width:100%;
+    width: 100%;
     margin: -7px 10px auto 10px;
     padding: 0;
     float: right;
@@ -94,13 +94,13 @@ body {
     animation: escribiendo 4s steps(11) infinite;
 }
 
-    #sec-1 .text .btn {
-        margin-top: 10%;
-        padding: 1px;
-        width: 40%;
-        height: 20%;
-        background-color: #ec9404;
-    }
+#sec-1 .text .btn {
+    margin-top: 10%;
+    padding: 1px;
+    width: 40%;
+    height: 20%;
+    background-color: #ec9404;
+}
 
 #sec-1 .text .btnSoyCliente {
     width: 40%;
@@ -286,17 +286,6 @@ li .active {
         margin: auto !important;
         width: 100% !important;
     }
-
-    #sec-1 .text .btn {
-        height: 30px;
-    }
-        /*background-color: #ec9404;*/
-    .buttonDiv .buttonDiv {
-        width: 100% !important;
-    }
-    .btnDelta {
-        height: 40px;
-    }
     .slider-1 {
         width: 120%;
         margin: 0;
@@ -341,9 +330,12 @@ li .active {
     #sec-1 .text .btnSoyCliente {
         margin-right: 1%;
         margin-left: 10%;
-        height:30px;
+        height: 30px;
     }
-    #sec-2 .divContainer{
+    #sec-1 .text .btn {
+        height: 30px;
+    }
+    #sec-2 .divContainer {
         display: block;
         padding: 0 5%;
     }
@@ -353,10 +345,10 @@ li .active {
     #sec-2 .divOptions {
         width: 99%;
     }
-    #sec-2 .tabs{
+    #sec-2 .tabs {
         display: block;
     }
-    #sec-2 .custom_li{
+    #sec-2 .custom_li {
         width: 100%;
     }
     #sec-4 {
