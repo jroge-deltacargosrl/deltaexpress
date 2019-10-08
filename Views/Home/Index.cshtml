@@ -18,7 +18,7 @@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-            crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+              crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
         <link rel="shortcut icon" href="~/images/deltax-02.ico" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -27,7 +27,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="~/node_modules/sweetalert2/dist/sweetalert2.min.css">
     <link href="~/css/bundle-styles.css" rel="stylesheet">
-    <link href="~/css/teamStyles.css" rel="stylesheet" />
+    <link href="~/css/teamStyles.css" rel="stylesheet" /> @* NO ESTA SIENDO UTILIZADO*@
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+
+    <link href="~/css/login_styles.css" rel="stylesheet" />
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/contact.js"></script>
     <!-- Scroll -->
     <script src="~/js/smooth-scroll.min.js"></script>
     <script>
@@ -37,7 +49,7 @@
             speed: 2000, // Integer. How fast to complete the scroll in milliseconds
             easing: 'easeInOutCubic', // Easing pattern to use
             offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-            callback: function(anchor, toggle) {} // Function to run after scrolling
+            callback: function (anchor, toggle) { } // Function to run after scrolling
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
@@ -48,13 +60,13 @@
 <body>
     <!-- MENÚ -->
     <header>
-        <nav class="myNavbar navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="myNavbar navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logoDeltaX.png" class="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    </button>
+                </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse myNavbarElements">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -67,13 +79,47 @@
                             <a class="nav-link text-dark" data-scroll href="#sec-5">Contacto</a>
                         </li>
                         <li class="nav-item buttonDiv">
-                            <button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>
+                            @* EJECUTAR LA ACCION DE CUADRO MODAL*@
+                            <a class="btn btnDelta" role="button" style="width:100%;"  data-scroll href="" data-toggle="modal" data-target="#modalLoginForm">Iniciar Sesión</a>
+                            @*<button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>*@
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="headLogin" class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesíon</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <i class="fas fa-envelope prefix grey-text"></i>
+                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <label id="label-control" data-error="inválido" data-success="valido" for="defaultForm-email">Email</label>
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <label data-error="password inválido" data-success="aceptada" for="defaultForm-pass"> Password</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button id="submitLogin" class="btn btn-default">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- FIN MENU -->
     <!-- SECCIÓN 1 : Inicio-->
     <div class="slider-1" id="sec-1">
@@ -138,13 +184,13 @@
             <div class="col colTxt">
                 <h1>Transporta carga con nosotros</h1>
                 @*
-                <p><b>Cotiza nuestros servicios ahora!</b></p>*@
+                    <p><b>Cotiza nuestros servicios ahora!</b></p>*@
                 <p>Regístrate ahora!</p>
                 <div>
                     <img class="imgForms" src="~/images/form_transportista.jpg" alt="Imagen no cargada" />
                 </div>
                 @*
-                <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
+                    <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
 
 
             </div>
@@ -190,7 +236,7 @@
                             <option value="2">Nissan Condor o similar</option>
                             <option value="2">Toyota Dyna</option>
                             <option value="2">Otros</option>
-                            
+
                         </select>
                     </div>
                     @*Agregar el listado de camiones disponibles*@
@@ -252,7 +298,7 @@
                                 <option value="Potosi">Potosi</option>
                                 <option value="Oruro">Oruro</option>
                                 <option value="Tarija">Tarija</option>
-                                <option  value="Trinidad">Trinidad</option>
+                                <option value="Trinidad">Trinidad</option>
                             </select>
                         </div>
                         <div class="col">
@@ -363,7 +409,6 @@
             &copy; Copyright Delta X - 2019
         </div>
     </footer>
-    <script src="~/js/contact.js"></script>
     <!-- FIN SECCIÓN -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
@@ -378,15 +423,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" asp-fallback-src="~/lib/jquery/dist/jquery.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
         </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous"
-            integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+   
     <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
-    <script src="~/js/contact.js"></script>
+    
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+
     <link href="~/css/myStyles.css" rel="stylesheet" />
+
+
 </body>
 
 </html>
