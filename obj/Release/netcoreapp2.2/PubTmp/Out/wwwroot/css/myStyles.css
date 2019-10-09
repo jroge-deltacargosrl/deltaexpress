@@ -158,18 +158,14 @@ body {
 
             #sec-2 .divOptions .tabs li a {
                 margin: 0;
-                padding: 0 0;
+                padding: 10% 5%;
                 width: 100%;
-                height:35px;
-                padding-top:13px;
+                font-size:65%;
+                /*height:68px; */
+                /*padding-top: 20px;*/
                 background-color: lightgray;
                 text-decoration: none;
                 border-radius: 2px !important;
-                /*padding: 10% 20%;
-                
-                background-color: lightgray;
-                text-decoration: none;
-                border-radius: 2px !important;*/
             }
 
 .colTxt {
@@ -677,7 +673,8 @@ li .active {
     }
 }
 
-@media screen and (min-width: 361px) and (max-width: 412px) {
+/*412px antes*/
+@media screen and (min-width: 361px) and (max-width: 580px) {
     header {
         width: 100%;
     }
