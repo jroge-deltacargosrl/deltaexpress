@@ -305,11 +305,14 @@ li .active {
 .footer1 {
     background-color: white;
 }
-
+.close span {
+    color: white;
+    text-decoration: white;
+}
 
 /*SECCION RESPOSIVA : CELULAR */
-/* GALAXI S5*/
-@media screen and (max-width: 360px) {
+/* IPHONE 5*/
+@media screen and (max-width: 320px) {
     header {
         width: 100%;
     }
@@ -488,8 +491,8 @@ li .active {
         padding: 0 0 0 5%;
     }
 }
-
-@media screen and (min-width: 361px) and (max-width: 361px) {
+/*Galaxy S5*/
+@media screen and (min-width: 321px) and (max-width: 360px) {
     header {
         width: 100%;
     }
@@ -514,6 +517,7 @@ li .active {
         width: 120%;
         margin: 0;
         padding: 0;
+        background-position: -50em -2cm;
     }
 
     #sec-1 .divContainer {
@@ -571,7 +575,7 @@ li .active {
             }
 
     #sec-2 {
-        height: 700px;
+        height: 600px;
     }
 
         #sec-2 .divContainer {
@@ -673,9 +677,8 @@ li .active {
         padding: 0 0 0 5%;
     }
 }
-
-/*412px antes*/
-@media screen and (min-width: 361px) and (max-width: 580px) {
+/*iphone 6*/
+@media screen and (min-width: 361px) and (max-width: 375px) {
     header {
         width: 100%;
     }
@@ -700,6 +703,7 @@ li .active {
         width: 120%;
         margin: 0;
         padding: 0;
+        background-position: -50em -2cm;
     }
 
     #sec-1 .divContainer {
@@ -757,7 +761,7 @@ li .active {
             }
 
     #sec-2 {
-        height: 700px;
+        height: 550px;
     }
 
         #sec-2 .divContainer {
@@ -793,7 +797,7 @@ li .active {
 
 
     #sec-4 {
-        height: 1050px;
+        height: 950px;
     }
 
         #sec-4 .divContainer {
@@ -815,7 +819,7 @@ li .active {
         }
 
     #sec-5 {
-        height: 1150px;
+        height: 1250px;
         margin-top: 15%;
     }
 
@@ -829,14 +833,14 @@ li .active {
             margin: 0;
             padding: 0;
             width: 100%;
-            margin-top: -290%;
+            margin-top: -330%;
         }
 
         #sec-5 .colForm {
             margin: 0;
             padding: 1% 0;
             width: 100%;
-            margin-top: 70%;
+            margin-top: 100%;
         }
 
         #sec-5 form {
@@ -863,7 +867,376 @@ li .active {
         padding: 0 0 0 5%;
     }
 }
-.close span{
-    color:white;
-    text-decoration: white;
+/*Pixel 2*/
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    header {
+        width: 100%;
+    }
+
+    .container {
+        display: flex !important;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .buttonDiv {
+        align-content: center;
+        text-align: center;
+        display: block;
+        margin: auto !important;
+        width: 100% !important;
+    }
+
+    .slider-1 {
+        width: 120%;
+        margin: 0;
+        padding: 0;
+        background-position: -50em -2cm;
+    }
+
+    #sec-1 .divContainer {
+        display: block;
+        padding-top: 60%;
+    }
+
+    #sec-1 {
+        border: none;
+    }
+
+    #sec-1 .text {
+        margin: 0;
+        width: 100%;
+    }
+
+    #sec-1 .text div {
+        margin: 0 0 0 10%;
+        height: 35%;
+        display: block;
+    }
+
+    #sec-1 .text h1 {
+        margin: 0 0 0 10%;
+        font-size: 150%;
+        width: 90%;
+    }
+
+    #sec-1 .text .h12 {
+        padding: 0;
+        margin: 0;
+        font-size: 150%;
+        width: 60%;
+    }
+
+    #sec-1 .text .h12 .span1 {
+        height: 31px;
+        padding: 0;
+        margin: 0;
+        margin-top: -1%;
+    }
+
+    #sec-1 .text div h1 {
+        margin: 0;
+    }
+
+    #sec-1 .text .btnSoyCliente {
+        margin-right: 1%;
+        margin-left: 10%;
+        height: 30px;
+    }
+
+    #sec-1 .text .btn {
+        height: 30px;
+    }
+
+    #sec-2 {
+        height: 650px;
+    }
+
+    #sec-2 .divContainer {
+        display: block;
+        padding: 4% 5%;
+    }
+
+    #sec-2 .img {
+        width: 90%;
+    }
+
+    #sec-2 .divOptions {
+        width: 99%;
+    }
+
+    #sec-2 .tabs {
+        display: block;
+    }
+
+    #sec-2 .tabContents {
+        /*overflow-x: scroll;*/
+    }
+
+    #sec-2 .tabContents article p {
+        font-size: 70%;
+    }
+
+    #sec-2 .custom_li {
+        width: 100%;
+    }
+
+    #sec-2 .custom_li p {
+        font-size: medium;
+    }
+
+    #sec-4 {
+        height: 1050px;
+    }
+
+    #sec-4 .divContainer {
+        display: block;
+        padding: 0 5%;
+        margin-top: 17%;
+    }
+
+    #sec-4 .colTxt {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #sec-4 .colForm {
+        margin: 0;
+        padding: 1% 0;
+        width: 100%;
+    }
+
+    #sec-5 {
+        height: 1250px;
+    }
+
+    #sec-5 .divContainer {
+        display: block;
+        padding: 0 5%;
+        margin-top: 17%;
+    }
+
+    #sec-5 .colTxt {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: -310%;
+    }
+
+    #sec-5 .colForm {
+        margin: 0;
+        padding: 1% 0;
+        width: 100%;
+        margin-top: 107%;
+    }
+
+    .footer2 {
+        width: 100%;
+        height: 10%;
+    }
+
+    .footer1 {
+        width: 100%;
+        height: 10%;
+    }
+
+    .logoFooter {
+        width: 35%;
+    }
+
+    .divContactUs {
+        display: flex;
+        width: 65%;
+        padding: 0 0 0 5%;
+    }
+}
+/*iPad*/
+@media screen and (min-width: 415px) and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    .container {
+        display: flex !important;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    .buttonDiv {
+        align-content: center;
+        text-align: center;
+        display: block;
+        margin: auto !important;
+        width: 100% !important;
+    }
+
+    .slider-1 {
+        width: 120%;
+        margin: 0;
+        padding: 0;
+        background-position: -50em -2cm;
+    }
+
+    #sec-1 .divContainer {
+        display: block;
+        padding-top: 60%;
+    }
+
+    #sec-1 {
+        border: none;
+        height: 900px;
+    }
+
+    #sec-1 .text {
+        margin: 0;
+        width: 100%;
+    }
+
+    #sec-1 .text div {
+        margin: 0 0 0 10%;
+        height: 35%;
+        display: block;
+    }
+
+    #sec-1 .text h1 {
+        margin: 0 0 0 10%;
+        font-size: 150%;
+        width: 90%;
+    }
+
+    #sec-1 .text .h12 {
+        padding: 0;
+        margin: 0;
+        font-size: 150%;
+        width: 60%;
+    }
+
+    #sec-1 .text .h12 .span1 {
+        height: 31px;
+        padding: 0;
+        margin: 0;
+        margin-top: -1%;
+    }
+
+    #sec-1 .text div h1 {
+        margin: 0;
+    }
+
+    #sec-1 .text .btnSoyCliente {
+        margin-right: 1%;
+        margin-left: 10%;
+        height: 30px;
+    }
+
+    #sec-1 .text .btn {
+        height: 30px;
+    }
+
+    #sec-2 {
+        height: 950px;
+    }
+
+    #sec-2 .divContainer {
+        display: block;
+        padding: 4% 5%;
+    }
+
+    #sec-2 .img {
+        width: 90%;
+    }
+
+    #sec-2 .divOptions {
+        width: 99%;
+    }
+
+    #sec-2 .tabs {
+        display: block;
+    }
+
+    #sec-2 .tabContents {
+        /*overflow-x: scroll;*/
+    }
+
+    #sec-2 .tabContents article p {
+        font-size: 70%;
+    }
+
+    #sec-2 .custom_li {
+        width: 100%;
+    }
+
+    #sec-2 .custom_li p {
+        font-size: medium;
+    }
+
+    #sec-4 {
+        height: 1300px;
+    }
+
+    #sec-4 .divContainer {
+        display: block;
+        padding: 0 5%;
+        margin-top: 17%;
+    }
+
+    #sec-4 .colTxt {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #sec-4 .colForm {
+        margin: 0;
+        padding: 1% 0;
+        width: 100%;
+    }
+
+    #sec-5 {
+        height: 1350px;
+    }
+
+    #sec-5 .divContainer {
+        display: block;
+        padding: 0 5%;
+        margin-top: 17%;
+    }
+
+    #sec-5 .colTxt {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-top: -188%;
+    }
+
+    #sec-5 .colForm {
+        margin: 0;
+        padding: 1% 0;
+        width: 100%;
+        margin-top: 70%;
+    }
+
+    .footer2 {
+        width: 100%;
+        height: 10%;
+    }
+
+    .footer1 {
+        width: 100%;
+        height: 10%;
+    }
+
+    .logoFooter {
+        width: 35%;
+    }
+
+    .divContactUs {
+        display: flex;
+        width: 65%;
+        padding: 0 0 0 5%;
+    }
 }
