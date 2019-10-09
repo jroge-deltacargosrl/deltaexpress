@@ -68,13 +68,13 @@ jQuery(document).ready(function ($) {
         let commentTxt = "";
         switch (typeService) {
             case 1:
-                commentTxt = "Hola! 1uiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana...";
+                commentTxt = "Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana...";
                 break;
             case 2:
                 commentTxt = "Hola! Tengo 10 Pallets de baldes de pintura, con un peso total de 20 Tn..."
                 break;
             case 3:
-                commentTxt = "Hola! quiero transportar 10 Pallets, desde mis almacenes en el Parque Industrial hasta la Av. Banzer 9no Anillo, almacenes XYZ...";
+                commentTxt = "Hola! Quiero transportar 10 Pallets, desde mis almacenes en el Parque Industrial hasta la Av. Banzer 9no Anillo, almacenes XYZ...";
                 break;
             default:
                 break;

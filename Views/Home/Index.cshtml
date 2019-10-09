@@ -39,7 +39,7 @@
     <link href="~/css/login_styles.css" rel="stylesheet" />
 
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/contact.js"></script>
+    
     <!-- Scroll -->
     <script src="~/js/smooth-scroll.min.js"></script>
     <script>
@@ -80,7 +80,7 @@
                         </li>
                         <li class="nav-item buttonDiv">
                             @* EJECUTAR LA ACCION DE CUADRO MODAL*@
-                            <a class="btn btnDelta" role="button" style="width:100%;"  data-scroll href="" data-toggle="modal" data-target="#modalLoginForm">Iniciar Sesión</a>
+                            <a class="btn btnDelta" role="button" style="width:100%;" data-scroll href="" data-toggle="modal" data-target="#modalLoginForm">Iniciar Sesión</a>
                             @*<button data-scroll href="#sec-4" class="btn btnDelta" role="button" aria-pressed="true">Iniciar sesión</button>*@
                         </li>
                     </ul>
@@ -93,7 +93,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div id="headLogin" class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesíon</h4>
+                    <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesión</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -151,15 +151,16 @@
             <img id="tab3img" src="~/images/img_cotizaciones.png" class="img" />
             <div class="divOptions">
                 <ul class="tabs">
-                    <li class="custom_li" id="li1"><a href="#tab1"><span><b>Geolocalización</b></span></a></li>
-                    <li class="custom_li" id="li2"><a href="#tab2"><span><b>Seguimiento</b></span></a></li>
-                    <li class="custom_li" id="li3"><a href="#tab3"><span><b>Cotizaciones</b></span></a></li>
+                    <li class="custom_li" id="li1"><a href="#tab1"><span><b>GEOLOCALIZACIÓN</b></span></a></li>
+                    <li class="custom_li" id="li2"><a href="#tab2"><span><b>SEGUIMIENTO</b></span></a></li>
+                    <li class="custom_li" id="li3"><a href="#tab3"><span><b>COTIZACIONES</b></span></a></li>
                 </ul>
                 <div class="tabContents">
                     <article id="tab1">
                         <p>
-                            Ahora podrás conocer la ubicación exacta del camión que lleva tu carga, en todo momento. Ingresando a nuestro portal Cliente, podrás conocer la ubicación exacta de cada una de las Operaciones en tránsito contratadas, así como también el historial de operaciones
-                            pasadas.
+                            Ahora podrás conocer la ubicación exacta del camión que lleva tu carga.
+                            Iniciando sesión en nuestro portal cliente, podrás monitorear tus operaciones en tránsito
+                            , ási como támbien el historial de operaciones pasadas
                         </p>
                     </article>
                     <article id="tab2">
@@ -281,7 +282,7 @@
 
                         <label for="serviceType">Tipo de Servicio *</label>
                         <select class="form-control" required name="serviceType">
-                            <option value="1">Transporte Nacional</option>
+                            <option selected value="1">Transporte Nacional</option>
                             <option value="2">Almacenamiento de Carga</option>
                             <option value="3">Transporte Urbano en SCZ</option>
                         </select>
@@ -373,7 +374,7 @@
                     </div>
                     <div class="form-row">
                         <label for="comentanos">Coméntanos</label>
-                        <textarea class="form-control" rows="3" name="comentanos" placeholder="Hola, mi nombre es ..."></textarea>
+                        <textarea class="form-control" rows="3" name="comentanos" placeholder="Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana..."></textarea>
                     </div>
                     <div class="form-row">
                         <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
@@ -426,10 +427,10 @@
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
         </script>
     </environment>
-   
+
     <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
-    
+
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -439,7 +440,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
 
-
+    <script src="~/js/contact.js"></script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
 
 
