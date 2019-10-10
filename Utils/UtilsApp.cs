@@ -48,16 +48,13 @@ namespace DeltaXpress.Utils
             }
         }
 
-
-
-
         // Definir un template con bootstrap para dar estilos personalizados a los mensajes
         public static string messageContact(ContactModel contact)
         {
             List<string> fieldsHeader = new List<string>() { "Empresa", "Nombre Completo", "Celular", "Correo Electronico", "Servicio", "Origen", "Destino" };
             return @"<html>
                     <body>
-                        <p>Informacion del lead contactado por la web DELTA XPRESS:</p></br></br>
+                        <p>Informacion del lead contactado por la web DELTAX:</p></br></br>
                             <table border =\" + "1" + @"\>" +
                             dataBody(fieldsHeader, fieldsContact(contact)) +
                         @"</table>
