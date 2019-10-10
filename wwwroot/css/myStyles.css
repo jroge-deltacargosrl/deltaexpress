@@ -1,7 +1,12 @@
+@font-face {
+    font-family: 'samsungsharpsans';
+    src:url(../font/samsungsharpsans-medium.otf);
+}
 body {
     display: flex;
     flex-direction: column;
     background-color: white;
+    font-family:samsungsharpsans;
 }
 
 .container {
@@ -206,7 +211,7 @@ body {
         margin: 10% 0% 0% 1%;
         text-align: center;
         padding: 0% 10%;
-        font-size: larger;
+        font-size: 95%;
     }
 
 li .active {
@@ -265,6 +270,7 @@ li .active {
         margin: 3% 3% 0% 0%;
         font-size: 125%;
     }
+
 
     .divContactUs img {
         width: 25px;
@@ -417,7 +423,7 @@ li .active {
 
         #sec-2 .tabContents article p {
             /*overflow-x: scroll;*/
-            font-size: 50%;
+            font-size: 30%;
         }
 
         #sec-2 .custom_li {
@@ -600,7 +606,7 @@ li .active {
         }
 
             #sec-2 .tabContents article p {
-                font-size: 70%;
+                font-size: 30%;
             }
 
         #sec-2 .custom_li {
@@ -786,7 +792,7 @@ li .active {
         }
 
         #sec-2 .divOptions .tabContents p {
-            font-size: small;
+            font-size: smaller;
         }
 
         #sec-2 .custom_li {
@@ -976,15 +982,17 @@ li .active {
     }
 
     #sec-2 .tabContents article p {
-        font-size: 70%;
+        /*font-size: 70%;*/
+        font-size:50%;
     }
+
 
     #sec-2 .custom_li {
         width: 100%;
     }
 
     #sec-2 .custom_li p {
-        font-size: medium;
+        font-size: 50%;
     }
 
     #sec-4 {
@@ -1163,7 +1171,8 @@ li .active {
     }
 
     #sec-2 .tabContents article p {
-        font-size: 70%;
+        /*font-size: 70%;*/
+        font-size:50%;
     }
 
     #sec-2 .custom_li {
