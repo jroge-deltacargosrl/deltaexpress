@@ -171,6 +171,7 @@ jQuery(document).ready(function ($) {
 });
 
 // Metodos para llamar al formulario por eventos personalizados
+// no utlizado actualmente
 function postCarrier() {
     var formCarrier = document.forms[0];
     if (formCarrier.checkValidity()) {
@@ -239,13 +240,10 @@ function postCarrier() {
     return false;
 }
 
-
-
-
 function sendRequestHTTP(url, methodRequest, headers, data, enableCors) {
     let requestHTTP = new Request(url, {
         method: methodRequest,
-        body: methodRequest == 'POST' ? JSON.stringify(data) : {},
+        body: methodRequest != 'GET' ? JSON.stringify(data) : {},
         headers: headers,
         mode: enableCors ? 'cors' : 'no-cors'
     });
@@ -254,38 +252,6 @@ function sendRequestHTTP(url, methodRequest, headers, data, enableCors) {
             return response.json();
         });
 }
-
-
-// test function Request DATA
-function testRequest() {
-    let headersRequest = new Headers();
-
-    // headersRequest.append('Accept', 'application/json');
-    headersRequest.append('Content-Type', 'application/json');
-    headersRequest.append('Access-Control-Allow-Origin', '*');
-    headersRequest.append('Access - Control - Allow - Methods', 'GET, POST, OPTIONS');
-    headersRequest.append('Access - Control - Allow - Credentials', 'true');
-
-    sendRequestHTTP('https://reqres.in/api/users?page=2', 'GET', headersRequest, null, true)
-        .then(responseData => {
-            console.log(responseData);
-        });
-
-
-}
-
-function onlyAlert() {
-    setTimeout(function () {
-        Swal.fire({
-            title: 'Solicitud de cotizacion enviada!!!',
-            text: 'Do you want to continue',
-            type: 'success',
-            confirmButtonText: 'OK'
-        });
-    }, 1000);
-    return false;
-}
-
 
 function postQuotationWithRegisterClient() {
     var formQuotation = $('form')[1];
@@ -299,7 +265,7 @@ function postQuotationWithRegisterClient() {
             id_membership: 2 // delta x
         };
         //let urlApiRegisterClient = "https://localhost:44333/api/v1/client/";
-        let urlApiRegisterClient = URL_AZURE_SERVER + "/client/";
+        let urlApiRegisterClient = URL_IIS_EXPRESS_SERVER + "/client/";
         var headers = {
             //'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -347,7 +313,7 @@ function postQuotation(idContact) {
     // solicitud a la API TMS
     //let url = "https://deltacargoapi.azurewebsites.net/api/v1/quotation/";
     //let urlRequestQuotation = "https://localhost:44333/api/v1/quotation/";
-    let urlRequestQuotation = URL_AZURE_SERVER + "/quotation/";
+    let urlRequestQuotation = URL_IIS_EXPRESS_SERVER + "/quotation/";
 
     var headers = {
         //'Accept': 'application/json',
@@ -358,7 +324,9 @@ function postQuotation(idContact) {
     };
     sendRequestHTTP(urlRequestQuotation, 'POST', headers, quotation, true)
         .then(responseQuotationDetails => {
-
+            //console.log(responseQuotationDetails);
+            var jsonQuotation = JSON.stringify(responseQuotationDetails);
+            console.log(jsonQuotation);
             sendMailWithQuotation(responseQuotationDetails);
 
             /*Swal.fire({
@@ -374,18 +342,18 @@ function postQuotation(idContact) {
 }
 
 
-
-
-// FUNCIONES YA NO UTILIZADAS
 function sendMailWithQuotation(quotationDetails) {
 
     var headers = {
-        'Accept': 'application/json', 
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
     };
+    console.log(quotationDetails);
     let urlMailServices = "/Quotation/SendMail/";
-    sendRequestHTTP(urlMailServices, 'POST', headers, quotationDetails, false)
+    sendRequestHTTP(urlMailServices, 'POST', headers, quotationDetails, true)
         .then(responseQuotationMail => {
+            console.log(responseQuotationMail)
             Swal.fire({
                 title: 'Solicitud de Cotizacion',
                 text: responseQuotationMail.message,
@@ -394,6 +362,7 @@ function sendMailWithQuotation(quotationDetails) {
                 timer: 3000
             });
         });
+
     
 
     /*var $formContact = $('form')[0];
@@ -443,5 +412,34 @@ function sendMailWithQuotation(quotationDetails) {
     }*/
 }
 
+// test function Request DATA
+function testRequest() {
+    let headersRequest = new Headers();
+
+    // headersRequest.append('Accept', 'application/json');
+    headersRequest.append('Content-Type', 'application/json');
+    headersRequest.append('Access-Control-Allow-Origin', '*');
+    headersRequest.append('Access - Control - Allow - Methods', 'GET, POST, OPTIONS');
+    headersRequest.append('Access - Control - Allow - Credentials', 'true');
+
+    sendRequestHTTP('https://reqres.in/api/users?page=2', 'GET', headersRequest, null, true)
+        .then(responseData => {
+            console.log(responseData);
+        });
+
+
+}
+
+function onlyAlert() {
+    setTimeout(function () {
+        Swal.fire({
+            title: 'Solicitud de cotizacion enviada!!!',
+            text: 'Do you want to continue',
+            type: 'success',
+            confirmButtonText: 'OK'
+        });
+    }, 1000);
+    return false;
+}
 
 

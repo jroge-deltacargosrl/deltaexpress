@@ -12,8 +12,9 @@ namespace DeltaXpress.Models.DAL
 
         public static ContactResponse sendEmail(ContactModel contact)
         {
+            return null;    
             // ver la forma de validar este envio de datos en el mismo formulario
-            var response = new ContactResponse
+            /*var response = new ContactResponse
             {
                 code = 200, // cambiar a los codigos http (ok)
                 dateResponse = DateTime.UtcNow,
@@ -31,7 +32,7 @@ namespace DeltaXpress.Models.DAL
                 response.code = 400; // bad request
                 response.message = MESSAGE_FAILED_EMAIL;
             }
-            return response; 
+            return response; */
 
         }
     }

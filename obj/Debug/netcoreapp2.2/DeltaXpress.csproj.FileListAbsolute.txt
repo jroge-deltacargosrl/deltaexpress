@@ -61,39 +61,6 @@ E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcor
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete
 E:\Documentacion Trabajo\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csprojAssemblyReference.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.Development.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\package-lock.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.deps.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.runtimeconfig.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.runtimeconfig.dev.json
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.dll
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.pdb
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.Views.dll
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.Views.pdb
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorAssemblyInfo.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorAssemblyInfo.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.AssemblyInfoInputs.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.AssemblyInfo.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.TagHelpers.input.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.TagHelpers.output.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorCoreGenerate.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorTargetAssemblyInfo.cache
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorTargetAssemblyInfo.cs
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.Views.pdb
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.dll
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete
-E:\Documentacion Trabajo Profesional\DELTA CARGO\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csprojAssemblyReference.cache
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.Development.json
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.json
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\package-lock.json
@@ -127,3 +94,36 @@ E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.dll
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
 E:\Documentacion Trabajo Profesional\Delta Cargo SRL\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\appsettings.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\package-lock.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.deps.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.runtimeconfig.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.runtimeconfig.dev.json
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.dll
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.pdb
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.Views.dll
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\bin\Debug\netcoreapp2.2\DeltaXpress.Views.pdb
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csprojAssemblyReference.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorAssemblyInfo.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorAssemblyInfo.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.AssemblyInfoInputs.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.AssemblyInfo.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.TagHelpers.input.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.TagHelpers.output.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorCoreGenerate.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorTargetAssemblyInfo.cache
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.RazorTargetAssemblyInfo.cs
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.Views.pdb
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.dll
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.pdb
+E:\Documentacion Trabajo Profesional\Delta Cargo\Implementacion\DeltaXpress\obj\Debug\netcoreapp2.2\DeltaXpress.csproj.CopyComplete

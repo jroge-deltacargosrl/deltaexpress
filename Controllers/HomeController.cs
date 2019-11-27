@@ -27,7 +27,7 @@ namespace DeltaXpress.Controllers
             this.repositoryUnitMeasurement = repositoryUnitMeasurement;
 
             // inicializar el entorno de la aplicacion de la solicitud API al TMS Services
-            initVarEnviroment(DevelopmentEnvironment.AzureServer);
+            initVarEnviroment(DevelopmentEnvironment.IISExpressServer);
         }
 
         public IActionResult Index()

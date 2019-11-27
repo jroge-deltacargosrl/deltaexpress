@@ -2,6 +2,12 @@
 //import { Alert } from "../lib/bootstrap/dist/js/bootstrap.bundle";
 //import Swal from "sweetalert2/src/sweetalert2";
 //import Swal from 'sweetalert2/dist/sweetalert2.js';
+const URL_AZURE_SERVER = "https://deltacargoapi.azurewebsites.net/api/v1";
+const URL_IIS_SERVER = "https://deltacargoapi.azurewebsites.net/api/v1";
+const URL_IIS_EXPRESS_SERVER = "https://localhost:44333/api/v1/";
+
+
+
 jQuery(document).ready(function ($) {
 
     // accion inicial tabs de tecnologia
@@ -187,8 +193,8 @@ function postCarrier() {
                 .value
         };
         //let url = 'https://jsonplaceholder.typicode.com/todos/1';
-        //let url = "https://localhost:44333/api/v1/carrier/";
-        let url = "https://deltacargoapi.azurewebsites.net/api/v1/carrier/";
+        //let url = "https://deltacargoapi.azurewebsites.net/api/v1/carrier/";
+        let url = URL_AZURE_SERVER+"/carrier/";
         var headers = {
             //'Accept': 'application/json', 
             'Content-Type': 'application/json',
@@ -292,7 +298,8 @@ function postQuotationWithRegisterClient() {
             phone: $('input[name=phoneClient]').val(),
             id_membership: 2 // delta x
         };
-        let urlApiRegisterClient = "https://localhost:44333/api/v1/client/";
+        //let urlApiRegisterClient = "https://localhost:44333/api/v1/client/";
+        let urlApiRegisterClient = URL_AZURE_SERVER + "/client/";
         var headers = {
             //'Accept': 'application/json',
             'Content-Type': 'application/json',
@@ -339,7 +346,9 @@ function postQuotation(idContact) {
 
     // solicitud a la API TMS
     //let url = "https://deltacargoapi.azurewebsites.net/api/v1/quotation/";
-    let urlRequestQuotation = "https://localhost:44333/api/v1/quotation/";
+    //let urlRequestQuotation = "https://localhost:44333/api/v1/quotation/";
+    let urlRequestQuotation = URL_AZURE_SERVER + "/quotation/";
+
     var headers = {
         //'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -348,14 +357,17 @@ function postQuotation(idContact) {
         //'Access-Control-Allow-Credentials': 'true'
     };
     sendRequestHTTP(urlRequestQuotation, 'POST', headers, quotation, true)
-        .then(response => {
-            Swal.fire({
+        .then(responseQuotationDetails => {
+
+            sendMailWithQuotation(responseQuotationDetails);
+
+            /*Swal.fire({
                 title: 'DELTAX',
                 text: 'Solicitud de Cotizacion realizada con éxito, pronto nos pondremos en contacto contigo.',
                 type: 'success',
                 showConfirmButton: false,
-                timer: 2000
-            });
+                timer: 3000
+            });**/
             var formQuotation = $('form')[1];
             formQuotation.reset();
         });
@@ -365,9 +377,26 @@ function postQuotation(idContact) {
 
 
 // FUNCIONES YA NO UTILIZADAS
-function responseCotization() {
+function sendMailWithQuotation(quotationDetails) {
 
-    var $formContact = $('form')[0];
+    var headers = {
+        'Accept': 'application/json', 
+        'Content-Type': 'application/json'
+    };
+    let urlMailServices = "/Quotation/SendMail/";
+    sendRequestHTTP(urlMailServices, 'POST', headers, quotationDetails, false)
+        .then(responseQuotationMail => {
+            Swal.fire({
+                title: 'Solicitud de Cotizacion',
+                text: responseQuotationMail.message,
+                type: responseQuotationMail.code == 200 ? 'success' : 'error',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        });
+    
+
+    /*var $formContact = $('form')[0];
     if ($formContact.checkValidity()) {
         var contactRequest = {
             company: $('input[name=company]').val(),
@@ -407,7 +436,7 @@ function responseCotization() {
             .fail(function (error) { });
         return false;
     }
-    return true;
+    return true;*/
 
     /*if (contactRequest.fullname != '' && contactRequest.phone != '' && contactRequest.serviceType != 0) {
         

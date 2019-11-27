@@ -26,7 +26,7 @@ namespace DeltaXpress.Controllers
 
         [HttpPost]
         [ActionName("SendMail")]
-        public JsonResult SendMailQuotation(QuotationDetailsViewDTO quotationDetails)
+        public JsonResult SendMailQuotation([FromBody]QuotationDetailsViewDTO quotationDetails)
         {
             var quotationResponseMail = mailServices.sendMail(quotationDetails);
             return new JsonResult(quotationResponseMail);
