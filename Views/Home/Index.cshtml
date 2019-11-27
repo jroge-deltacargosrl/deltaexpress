@@ -1,4 +1,9 @@
-﻿@{ Layout = null; }
+﻿@using DeltaXpress.Models.ViewModels;
+@using static DeltaXpress.Utils.UtilsApp;
+@model CarrierModel
+
+
+@{ Layout = null; }
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,8 +29,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans:200,400,500,600,700" rel="stylesheet">
     <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="~/node_modules/sweetalert2/dist/sweetalert2.min.css">
+
     <link href="~/css/bundle-styles.css" rel="stylesheet">
     <link href="~/css/teamStyles.css" rel="stylesheet" /> @* NO ESTA SIENDO UTILIZADO*@
 
@@ -39,7 +46,7 @@
     <link href="~/css/login_styles.css" rel="stylesheet" />
 
     <script src="~/js/site.js" asp-append-version="true"></script>
-    
+
     <!-- Scroll -->
     <script src="~/js/smooth-scroll.min.js"></script>
     <script>
@@ -53,11 +60,23 @@
         });
     </script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
-    <script src="~/js/myScripts.js"></script>
+    <script src="~/js/index.js"></script>
     <script src="~/js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
+
+    @{
+        var registerCarrierVM = (RegisterCarrierViewModel)ViewData["registerCarrier"];
+        var requestQuotationVM = (RequestQuotationViewModel)ViewData["requestQuotation"];
+
+        var trucksTypes = registerCarrierVM.trucksTypes;
+
+        var servicesTypes = requestQuotationVM.servicesTypes;
+        var umsStorageCapacity = requestQuotationVM.umsStorageCapacity;
+        var umsStorageTime = requestQuotationVM.umsStorageTime;
+
+    }
     <!-- MENÚ -->
     <header>
         <nav class="myNavbar navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -158,19 +177,19 @@
                     <article id="tab1">
                         <p>
                             Ahora podrás conocer la ubicación exacta del camión que lleva tu carga.
-                            Iniciando sesión en nuestro portal cliente, podrás monitorear tus operaciones en tránsito
-                            , ási como támbien el historial de operaciones pasadas
+                            Iniciando sesión en nuestro portal cliente, podrás monitorear tus operaciones en tránsito, así como también el historial de operaciones pasadas.
                         </p>
                     </article>
                     <article id="tab2">
                         <p>
-                            Ahora podrás saber todos los pasos a seguir para el transporte de tu carga, podrás ver todas y cada una de las etapas en las que se encuentra cada operación, así como también cargar y/o consultar documentos según la etapa.
+                            Ahora podrás saber todos los pasos a seguir para el transporte de tu carga, podrás
+                            ver todas y cada una de las etapas en las que se encuentra cada operación, así como también cargar y/o consultar documentos según la etapa.
                         </p>
                     </article>
                     <article id="tab3">
                         <p>
-                            Ahora podrás solicitar una cotización de manera sencilla, practica y rápida. Podrás solicitar cotizaciones por cada uno de los servicios que ofertamos, con un tiempo de respuesta inmediato dentro de las 24 horas de realizada la solicitud.
-
+                            Ahora podrás solicitar una cotización de manera sencilla, práctica y rápida. Podrás solicitar cotizaciones por cada uno de los servicios que ofertamos, con un
+                            tiempo de respuesta inmediato dentro de las 24 horas de realizada la solicitud.
                         </p>
                     </article>
                 </div>
@@ -191,57 +210,45 @@
                 </div>
                 @*
                     <h4>Estamos revolucionando la logística, contamos con tecnologia innovadora que optimiza cada una de nuestras operaciones. Transportar carga nunca fue tan fácil.</h4>*@
-
-
             </div>
             <div class="col colForm">
-                <form class="form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                <form class="form" name='nformTransp' id='formCarrier' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+                    <input type="hidden" name="idMembershipCarrier" value="2" />
                     <div class="form-row">
-                        <label for="company">Empresa</label>
-                        <input class="form-control" type="text" name="company" placeholder="Ej. Delta Transporte">
+                        <label for="companyCarrier">Empresa</label>
+                        <input class="form-control" type="text" name="companyCarrier" placeholder="Ej. Delta Transporte">
                     </div>
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label for="fullname">Nombres*</label>
-                            <input class="form-control" required type="text" name="fullname" placeholder="Ej. Victor">
+                            <label for="fullnameCarrier">Nombres*</label>
+                            <input class="form-control" data-value-missing= type="text" name="fullnameCarrier" placeholder="Ej. Victor" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="fullname">Apellidos*</label>
-                            <input class="form-control" required type="text" name="lastname" placeholder="Ej. Padilla">
+                            <label for="lastnameCarrier">Apellidos*</label>
+                            <input class="form-control" type="text" name="lastnameCarrier" placeholder="Ej. Padilla" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label for="phone">Nro. Licencia *</label>
-                            <input class="form-control" required type="number" name="nroLicencia" placeholder="Ej. 5482357">
+                            <label for="nroLicenseCarrier">Nro. Licencia *</label>
+                            <input class="form-control" type="number" min="1" name="nroLicenseCarrier" placeholder="Ej. 5482357" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="phone">Teléfono *</label>
-                            <input class="form-control" required type="text" name="phone" placeholder="Ej. 77350000">
+                            <label for="phoneCarrier">Teléfono *</label>
+                            <input class="form-control" type="tel" name="phoneCarrier" placeholder="Ej. 77350000" required>
                         </div>
                     </div>
                     <div class="form-row">
-                        <label for="email">Correo Electrónico</label>
-                        <input class="form-control" type="text" name="email" placeholder="Ej. victorpadilla@gmail.com">
+                        <label for="emailCarrier">Correo Electrónico</label>
+                        <input class="form-control" type="text" name="emailCarrier" placeholder="Ej. victorpadilla@gmail.com">
                     </div>
                     <div class="form-row">
-                        <label for="serviceType">Tipo de Camión *</label>
-                        <select class="form-control" required name="truckType">
-                            <option value="">Seleccionar</option>
-                            <option value="1">Camión Abierto</option>
-                            <option value="1">Saider</option>
-                            <option value="1">Furgón</option>
-                            <option value="1">Refrigerado</option>
-                            <option value="1">Bau</option>
-                            <option value="2">Nissan Condor o similar</option>
-                            <option value="2">Toyota Dyna</option>
-                            <option value="2">Otros</option>
-
+                        <label for="truckTypeCarrier">Tipo de Camión *</label>
+                        <select class="form-control" name="truckTypeCarrier" asp-items="@(new SelectList(trucksTypes,"id","type"))" required>
                         </select>
                     </div>
-                    @*Agregar el listado de camiones disponibles*@
                     <div class="form-row">
-                        <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
+                        <button type="submit" onclick="return postCarrier()" class="btn btn-block btnDelta">
                             <a style="color:white;text-decoration:none;">
                                 Regístrate
                             </a>
@@ -257,44 +264,38 @@
     <div class="slider-2 divContainerForm2" id="sec-5">
         <div class="divContainer">
             <div class="col colForm">
-                <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-                    <input type="hidden" name="zf_redirect_url" value="">
-                    <input type="hidden" name="zc_gad" value="">
+                <form class="form carrierRegister-form" asp-controller="Contact" asp-action="Contact" name='nformCliente' id='formCliente' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
                     <div class="form-row">
-                        <label for="company">Empresa</label>
-                        <input class="form-control" type="text" name="company" placeholder="Ej. DeltaX">
+                        <label for="companyQuotation">Empresa</label>
+                        <input class="form-control" type="text" name="companyClient" placeholder="Ej. DeltaX">
                     </div>
                     <div class="form-row">
-                        <label for="fullname">Nombre Completo *</label>
-                        <input class="form-control" required type="text" name="fullname" placeholder="Ej. Victor Padilla">
+                        <label for="fullnameQuotation">Nombre Completo *</label>
+                        <input class="form-control" required type="text" name="fullnameClient" placeholder="Ej. Victor Padilla">
                     </div>
                     <div class="form-row">
-                        <label for="phone">Teléfono *</label>
-                        <input class="form-control" required type="text" name="phone" placeholder="Ej. 77350000">
-                    </div>
-                    <div class="form-row">
-
-                        <label for="email">Correo Electrónico</label>
-                        <input class="form-control" type="text" name="email" placeholder="Ej. vpadilla@deltax.la">
+                        <label for="phoneQuotation">Teléfono *</label>
+                        <input class="form-control" required type="text" name="phoneClient" placeholder="Ej. 77350000">
                     </div>
                     <div class="form-row">
 
-                        <label for="serviceType">Tipo de Servicio*</label>
-                        <select class="form-control" required name="serviceType">
-                            <option selected value="1">Transporte Nacional</option>
-                            <option value="2">Almacenamiento de Carga en SCZ</option>
-                            <option value="3">Transporte Urbano en SCZ</option>
+                        <label for="emailCustomer">Correo Electrónico</label>
+                        <input class="form-control" type="text" name="emailClient" placeholder="Ej. vpadilla@deltax.la">
+                    </div>
+                    <div class="form-row">
+                        <label for="serviceTypeClient">Tipo de Servicio*</label>
+                        <select class="form-control" name="serviceTypeClient" asp-items="@(new SelectList(servicesTypes,"id","name"))" required>
                         </select>
                     </div>
                     <div id="divTransporteNacional" class="grid form-row row-of-combos">
                         <div class="col">
-                            <label id="lblOrigen" for="loadingSource">Origen de Carga</label>
-                            <select class="form-control" required name="loadingSource" id="">
-                                <option selected value="SantaCruz">Santa Cruz</option>
+                            <label id="lblOrigen" for="routeNationalOrigin">Origen de Carga</label>
+                            <select class="form-control" name="routeNationalOrigin">
+                                <option value="SantaCruz">Santa Cruz</option>
                                 <option value="LaPaz">La Paz</option>
                                 <option value="Cochabamba">Cochabamba</option>
                                 <option value="Sucre">Sucre</option>
-                                <option value="ElAlto">El Alto</option>
+                                <option value="El_Alto">El Alto</option>
                                 <option value="Potosi">Potosi</option>
                                 <option value="Oruro">Oruro</option>
                                 <option value="Tarija">Tarija</option>
@@ -302,13 +303,13 @@
                             </select>
                         </div>
                         <div class="col">
-                            <label id="lblDestino" for="loadingDestination">Destino de Carga</label>
-                            <select class="form-control" name="loadingDestination" id="">
+                            <label id="lblDestino" for="routeNationalDestination">Destino de Carga</label>
+                            <select class="form-control" name="routeNationalDestination">
                                 <option value="SantaCruz">Santa Cruz</option>
-                                <option selected value="LaPaz">La Paz</option>
+                                <option value="LaPaz">La Paz</option>
                                 <option value="Cochabamba">Cochabamba</option>
                                 <option value="Sucre">Sucre</option>
-                                <option value="ElAlto">El Alto</option>
+                                <option value="El_Alto">El Alto</option>
                                 <option value="Potosi">Potosi</option>
                                 <option value="Oruro">Oruro</option>
                                 <option value="Tarija">Tarija</option>
@@ -318,65 +319,62 @@
                     </div>
                     <div id="divPesoVolumen" class="form-row" style="display:none;">
                         <div class="col-md-6">
-                            <label for="phone">Peso *</label>
+                            <label for="weightQuotation">Peso *</label>
                             <div class="form-row">
                                 <div class="col-md-10">
-                                    <input class="form-control" required type="number" name="peso" placeholder="Ej. 20">
+                                    <input class="form-control" type="number" min="0" name="weightQuotation" placeholder="Ej. 20">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="peso"> Tn.</label>
+                                    <label for="peso">Tn.</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="phone">Volumen *</label>
+                            <label for="volumeQuotation">Volumen *</label>
                             <div class="form-row">
                                 <div class="col-md-10">
-                                    <input class="form-control" required type="number" name="volumen" placeholder="Ej. 40">
+                                    <input class="form-control" type="number" min="0" name="volumeQuotation" placeholder="Ej. 40">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="peso"> m3</label>
+                                    <label for="peso">m3</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div id="divAlmacenamientoCarga" class="form-row" style="display:none;">
                         <div class="col-md-6">
-                            <label for="phone">Capacidad de almacenamiento *</label>
+                            <label for="storageCapacityQuotation">Capacidad Almacenamiento*</label>
                             <div class="form-row">
                                 <div class="col-md-7">
-                                    <input class="form-control" required type="number" name="peso" placeholder="Ej. 10">
+                                    <input class="form-control" type="number" min="0" name="storageCapacityQuotation" placeholder="Ej. 10">
                                 </div>
                                 <div class="col-md-3">
-                                    <select class="form-control">
-                                        <option value="m2">m2</option>
-                                        <option value="m3">m3</option>
+                                    <select class="form-control" name="unitMeasurementCapacityQuotation"
+                                            asp-items="@(new SelectList(umsStorageCapacity,"id","abbreviation"))">
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <label for="phone">Tiempo de almacenamiento *</label>
+                            <label for="storageTimeQuotation">Tiempo Almacenamiento*</label>
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <input class="form-control" required type="number" name="peso" placeholder="Ej. 10">
+                                    <input class="form-control" type="number" min="0" name="storageTimeQuotation" placeholder="Ej. 10">
                                 </div>
                                 <div class="col-md-6">
-                                    <select class="form-control">
-                                        <option value="m2">Dia(s)</option>
-                                        <option value="m2">Semana(as)</option>
-                                        <option value="m3">Mes(es)</option>
+                                    <select class="form-control" name="unitMeasurementTimeQuotation"
+                                            asp-items="@(new SelectList(umsStorageTime,"id","abbreviation"))">
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <label for="comentanos">Coméntanos</label>
-                        <textarea class="form-control" rows="3" name="comentanos" placeholder="Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana..."></textarea>
+                        <label for="commentQuotation">Coméntanos</label>
+                        <textarea class="form-control" rows="3" name="commentQuotation" placeholder="Ej: Hola! Quiero transportar 10 pallets, peso total 20 Tn, en la ruta indicada esta semana..."></textarea>
                     </div>
                     <div class="form-row">
-                        <button type="submit" onclick="return responseCotization();" class="btn btn-block btnDelta">
+                        <button type="submit" onclick="return postQuotationWithRegisterClient();" class="btn btn-block btnDelta">
                             <a style="color:white;text-decoration:none;">
                                 Cotizar
                             </a>
@@ -399,13 +397,18 @@
         <div class="col">
             <div class="divContactUs">
                 <h3>Contáctanos</h3>
-                <a href="https://wa.me/59175637458">
-                    <img src="~/images/whatsapp (2).png" >
+                <a target="_blank" href="https://www.facebook.com/deltaxla-108230477266194/">
+                    <img src="~/images/facebook.png">
                 </a>
-                <a href="https://www.linkedin.com/company/40775825/admin/">
+                <a target="_blank" href="https://wa.me/59175637458">
+                    <img src="~/images/whatsapp (2).png">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/deltax.la/">
+                    <img src="~/images/instagram (1).png">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/40775825/admin/">
                     <img src="~/images/linkedin (3).png">
                 </a>
-                
             </div>
         </div>
     </footer>
@@ -433,6 +436,7 @@
         </script>
     </environment>
 
+    <!--  Sweet Alert Javascript  -->
     <script src="~/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
 
@@ -444,8 +448,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-
-    <script src="~/js/contact.js"></script>
     <link href="~/css/myStyles.css" rel="stylesheet" />
 
 

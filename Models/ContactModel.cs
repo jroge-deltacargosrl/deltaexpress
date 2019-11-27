@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DeltaXpress.Models
 {
+
+    // Clase futura a despreciar
     public class ContactModel
     {
         public string company { get; set; }

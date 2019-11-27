@@ -5,22 +5,21 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using static DeltaXpress.Utils.UtilsApp;
 
 namespace DeltaXpress.Models.API
 {
-    public class RepositoryApi<T>:IRepositoryCrud<T>
+    public class RepositoryApi<T> : IRepositoryApi<T>
     {
         private readonly RequestAPI requestApi;
-
         private string resource;
 
-        public RepositoryApi()
+        public RepositoryApi(RequestAPI requestApi)
         {
-            requestApi = new RequestAPI();
+            this.requestApi = requestApi;
         }
-
 
         public T create(T value)
         {
@@ -33,55 +32,45 @@ namespace DeltaXpress.Models.API
                 );
         }
 
+        public IEnumerable<T> getAll(Expression<Func<T, bool>> filter = null)
+        {
+            
+            var result = JsonConvert.DeserializeObject<List<T>>(
+                requestApi.addClient(URL_BASE)
+               .addRequest(new RestRequest(resource, Method.GET, DataFormat.Json))
+               .addHeader(new KeyValuePair<string, object>("Accept", "application/json"))
+               .buildRequest()
+               ).AsQueryable();
+
+            if (!isNull(filter))
+            {
+                result = result.Where(filter);
+            }
+            return result;
+            
+        }
+
         public void setResource(string resource)
         {
             this.resource = resource;
         }
-
-        /*public TruckTypeModel create(TruckTypeModel value)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TruckTypeModel delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TruckTypeModel get(int? id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<TruckTypeModel> getAll()
-        {
-            return JsonConvert.DeserializeObject<List<TruckTypeModel>>(requestApi.addClient(URL_BASE)
-                .addRequest(new RestRequest("truck/", Method.GET, DataFormat.Json))
-                .addHeader(new KeyValuePair<string, object>("Accept", "application/json"))
-                .buildRequest());
-        }
-
-        public TruckTypeModel update(int id, TruckTypeModel value)
-        {
-            throw new NotImplementedException();
-        }*/
 
         public T update(int id, T value)
         {
             throw new NotImplementedException();
         }
 
-        T IRepositoryCrud<T>.delete(int id)
+        T IRepositoryApi<T>.delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        T IRepositoryCrud<T>.get(int? id)
+        T IRepositoryApi<T>.get(int? id)
         {
             throw new NotImplementedException();
         }
 
-        List<T> IRepositoryCrud<T>.getAll()
+        /*IEnumerable<T> IRepositoryApi<T>.getAll()
         {
             return JsonConvert.DeserializeObject<List<T>>(
                 requestApi.addClient(URL_BASE)
@@ -89,6 +78,6 @@ namespace DeltaXpress.Models.API
                 .addHeader(new KeyValuePair<string, object>("Accept", "application/json"))
                 .buildRequest()
              );
-        }
+        }*/
     }
 }

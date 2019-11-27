@@ -48,10 +48,9 @@ namespace DeltaXpress.Models.Infraestructure
         // rediseñar este metodo de una forma optima para futuras iteraciones
         public RequestAPI addParameters(Dictionary<string, object> paramsRequest, ParameterType paramType)
         {
-            foreach (KeyValuePair<string, object> item in paramsRequest)
-            {
-                addParameter(item, paramType);
-            }
+            paramsRequest
+              .ToList()
+              .ForEach((k) => addParameter(k, paramType));
             return this;
         }
 

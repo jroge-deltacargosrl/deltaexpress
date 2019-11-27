@@ -23,7 +23,7 @@ namespace DeltaXpress.Models.DAL
                 .addFrom(EMAIL_EMISOR)
                 .addToList(EMAIL_RECEPTOR)
                 .addSubject(EMAIL_SUBJECT)
-                .addBodyMessage(messageContact(contact))
+                .addBodyMessage(formatMessageForQuotation(contact))
                 .enableBodyHtml()
                 .send();
             if (!mailResponse)

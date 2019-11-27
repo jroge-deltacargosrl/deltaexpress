@@ -262,7 +262,8 @@ li .active {
     display: flex;
     float: right;
     margin: auto;
-    padding: 1% 5% 0% 0%;
+    /*padding: 1% 5% 0% 0%;*/
+    padding: 1% 10% 0% 0%;
 }
 
     .divContactUs h3 {
@@ -504,7 +505,7 @@ li .active {
     .divContactUs {
         display: flex;
         width: 65%;
-        padding: 0 0 0 5%;
+        padding: 0 0 0 12%;
     }
 }
 /*Galaxy S5*/
@@ -690,7 +691,7 @@ li .active {
     .divContactUs {
         display: flex;
         width: 65%;
-        padding: 0 0 0 5%;
+        padding: 0 0 0 15%;
     }
 }
 /*iphone 6*/
@@ -880,7 +881,7 @@ li .active {
     .divContactUs {
         display: flex;
         width: 65%;
-        padding: 0 0 0 5%;
+        padding: 0 0 0 15%;
     }
 }
 /*Pixel 2*/
@@ -1068,7 +1069,7 @@ li .active {
     .divContactUs {
         display: flex;
         width: 65%;
-        padding: 0 0 0 5%;
+        padding: 0 0 0 15%;
     }
 }
 /*iPad*/
@@ -1257,5 +1258,12 @@ li .active {
         display: flex;
         width: 65%;
         padding: 0 0 0 5%;
+    }
+}
+
+
+@media(max-width:768px){
+    .divContactUs h3 {
+        display:none;
     }
 }
